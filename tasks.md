@@ -98,6 +98,18 @@
 - [x] Criar seção de demonstração de tabs no HTML
 - [x] Estilizar todos os estados das tabs
 
+## Limpeza de Estilos não-Padrão (Clean-up)
+
+- [x] Revisar seção de Cores e mover quaisquer estilos/demostrações que não pertençam ao design system para um arquivo separado chamado `index.css`.
+- [x] Conferir exemplos de Tipografia e transferir para `index.css` todos os estilos auxiliares/adicionais não definidos nas variáveis ou regras do design system.
+- [x] Analisar a seção de Espaçamentos e garantir que estilos inline ou adicionais aplicados apenas para visualização fiquem centralizados em `index.css` ao invés do HTML ou do design system principal.
+- [x] Verificar os Botões e mover para `index.css` qualquer estilo extra aplicado apenas para demo, garantindo que o design system permaneça limpo.
+- [x] Auditar Formulários (inputs, checkbox, radio, labels) e transferir para `index.css` os estilos temporários ou internos de demonstração.
+- [x] Revisar os componentes de Tabs e migrar para `index.css` estilos transitórios/demonstração usados apenas no HTML de exemplo.
+- [x] Criar uma checklist identificando todo uso de estilos inline ou CSS não documentado, e refatorar para que residam apenas em `index.css`.
+- [x] Atualizar todos os exemplos de uso, separando claramente os estilos do design system dos estilos de visualização/auxiliares (estes somente no `index.css`), evitando customizações manuais no HTML demo.
+
+
 ## Componente de Exemplo - Formulário Sign Up
 
 - [ ] Criar estrutura HTML do formulário Sign Up

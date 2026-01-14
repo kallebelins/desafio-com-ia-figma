@@ -1,0 +1,534 @@
+/* ============================================
+   Design System - Estilos de Demonstração
+   Estilos específicos para a página de demonstração
+   ============================================ */
+
+/* Layout da Página de Demonstração */
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-m);
+}
+
+.header {
+    background-color: var(--color-secondary);
+    padding: var(--spacing-xl) 0;
+    border-bottom: 1px solid var(--color-grey);
+}
+
+.header h1 {
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-s);
+}
+
+.header .subtitle {
+    font-size: var(--font-size-paragraph);
+    color: var(--color-black);
+    opacity: 0.7;
+}
+
+.main {
+    min-height: calc(100vh - 200px);
+    padding: var(--spacing-xl) 0;
+}
+
+.section {
+    margin-bottom: var(--spacing-xxl);
+}
+
+.section h2 {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-m);
+}
+
+.section p {
+    font-size: var(--font-size-paragraph);
+    line-height: var(--line-height-paragraph);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-m);
+}
+
+.footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: var(--spacing-l) 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: var(--font-size-paragraph);
+    opacity: 0.8;
+}
+
+/* ============================================
+   Demonstração de Cores
+   ============================================ */
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-l);
+    margin-top: var(--spacing-l);
+}
+
+.color-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: box-shadow var(--transition-base);
+}
+
+.color-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.color-card__swatch {
+    width: 100%;
+    height: 120px;
+    border-bottom: 1px solid var(--color-grey);
+}
+
+.color-card__swatch--primary {
+    background-color: var(--color-primary);
+}
+
+.color-card__swatch--secondary {
+    background-color: var(--color-secondary);
+}
+
+.color-card__swatch--action {
+    background-color: var(--color-action);
+}
+
+.color-card__swatch--grey {
+    background-color: var(--color-grey);
+}
+
+.color-card__swatch--black {
+    background-color: var(--color-black);
+}
+
+.color-card__info {
+    padding: var(--spacing-m);
+}
+
+.color-card__name {
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+}
+
+.color-card__value {
+    font-size: var(--font-size-paragraph);
+    line-height: var(--line-height-paragraph);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-xs);
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+}
+
+.color-card__variable {
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--color-black);
+    opacity: 0.6;
+    font-family: 'Courier New', monospace;
+}
+
+/* Responsividade para cards de cores */
+@media (max-width: 768px) {
+    .color-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   Demonstração de Tipografia
+   ============================================ */
+
+.typography-section {
+    margin-top: var(--spacing-l);
+}
+
+.typography-example {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-l);
+    margin-bottom: var(--spacing-l);
+}
+
+.typography-example__label {
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--color-black);
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--spacing-s);
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+}
+
+.typography-example__preview {
+    margin-bottom: var(--spacing-xs);
+}
+
+.typography-example__details {
+    margin-top: var(--spacing-s);
+    padding-top: var(--spacing-s);
+    border-top: 1px solid var(--color-grey);
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--color-black);
+    opacity: 0.7;
+    font-family: 'Courier New', monospace;
+}
+
+.typography-example__details span {
+    display: inline-block;
+    margin-right: var(--spacing-m);
+}
+
+.typography-example__details strong {
+    font-weight: 600;
+    opacity: 1;
+}
+
+/* ============================================
+   Demonstração de Espaçamento
+   ============================================ */
+
+.spacing-section {
+    margin-top: var(--spacing-l);
+}
+
+.spacing-example {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-l);
+    margin-bottom: var(--spacing-l);
+}
+
+.spacing-example__label {
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-m);
+    font-weight: 600;
+}
+
+.spacing-example__visual {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-m);
+    padding: var(--spacing-m);
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius);
+    min-height: 80px;
+}
+
+.spacing-example__box {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius);
+    flex-shrink: 0;
+}
+
+.spacing-example__gap {
+    background-color: var(--color-action);
+    height: 40px;
+    border-radius: 2px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.spacing-example__gap--xs {
+    width: var(--spacing-xs);
+}
+
+.spacing-example__gap--s {
+    width: var(--spacing-s);
+}
+
+.spacing-example__gap--m {
+    width: var(--spacing-m);
+}
+
+.spacing-example__gap--l {
+    width: var(--spacing-l);
+}
+
+.spacing-example__gap--xl {
+    width: var(--spacing-xl);
+}
+
+.spacing-example__gap--xxl {
+    width: var(--spacing-xxl);
+}
+
+.spacing-example__gap::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--color-black);
+    opacity: 0.3;
+    transform: translateY(-50%);
+}
+
+.spacing-example__details {
+    margin-top: var(--spacing-s);
+    padding-top: var(--spacing-s);
+    border-top: 1px solid var(--color-grey);
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--color-black);
+    opacity: 0.7;
+    font-family: 'Courier New', monospace;
+}
+
+.spacing-example__details span {
+    display: inline-block;
+    margin-right: var(--spacing-m);
+}
+
+.spacing-example__details strong {
+    font-weight: 600;
+    opacity: 1;
+}
+
+/* Responsividade para espaçamento */
+@media (max-width: 768px) {
+    .spacing-example__visual {
+        min-height: 60px;
+    }
+    
+    .spacing-example__box {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .spacing-example__gap {
+        height: 30px;
+    }
+}
+
+/* ============================================
+   Demonstração de Botões
+   ============================================ */
+
+.buttons-section {
+    margin-top: var(--spacing-l);
+}
+
+.buttons-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-m);
+    margin-bottom: var(--spacing-l);
+}
+
+.buttons-example {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-l);
+    margin-bottom: var(--spacing-l);
+}
+
+.buttons-example__label {
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-m);
+    font-weight: 600;
+}
+
+.buttons-example__description {
+    font-size: var(--font-size-paragraph);
+    line-height: var(--line-height-paragraph);
+    color: var(--color-black);
+    opacity: 0.7;
+    margin-bottom: var(--spacing-m);
+}
+
+.buttons-example__details {
+    margin-top: var(--spacing-m);
+    padding-top: var(--spacing-m);
+    border-top: 1px solid var(--color-grey);
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--color-black);
+    opacity: 0.7;
+    font-family: 'Courier New', monospace;
+}
+
+.buttons-example__details span {
+    display: inline-block;
+    margin-right: var(--spacing-m);
+}
+
+.buttons-example__details strong {
+    font-weight: 600;
+    opacity: 1;
+}
+
+/* Responsividade para botões */
+@media (max-width: 768px) {
+    .buttons-group {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   Demonstração de Formulários
+   ============================================ */
+
+.forms-section {
+    margin-top: var(--spacing-l);
+}
+
+.forms-example {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-l);
+    margin-bottom: var(--spacing-l);
+}
+
+.forms-example__label {
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-m);
+    font-weight: 600;
+}
+
+.forms-example__description {
+    font-size: var(--font-size-paragraph);
+    line-height: var(--line-height-paragraph);
+    color: var(--color-black);
+    opacity: 0.7;
+    margin-bottom: var(--spacing-m);
+}
+
+.forms-example__preview {
+    margin-bottom: var(--spacing-l);
+}
+
+.forms-example__details {
+    margin-top: var(--spacing-m);
+    padding-top: var(--spacing-m);
+    border-top: 1px solid var(--color-grey);
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--color-black);
+    opacity: 0.7;
+    font-family: 'Courier New', monospace;
+}
+
+.forms-example__details span {
+    display: inline-block;
+    margin-right: var(--spacing-m);
+}
+
+.forms-example__details strong {
+    font-weight: 600;
+    opacity: 1;
+}
+
+/* ============================================
+   Demonstração de Tabs
+   ============================================ */
+
+.tabs-section {
+    margin-top: var(--spacing-l);
+}
+
+.tabs-example {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-l);
+    margin-bottom: var(--spacing-l);
+}
+
+.tabs-example__label {
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-m);
+    font-weight: 600;
+}
+
+.tabs-example__description {
+    font-size: var(--font-size-paragraph);
+    line-height: var(--line-height-paragraph);
+    color: var(--color-black);
+    opacity: 0.7;
+    margin-bottom: var(--spacing-m);
+}
+
+.tabs-example__preview {
+    margin-bottom: var(--spacing-l);
+    padding: var(--spacing-m);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+}
+
+.tabs-example__preview--vertical {
+    display: flex;
+    gap: var(--spacing-l);
+    align-items: flex-start;
+}
+
+.tabs-example__content {
+    flex: 1;
+    padding: var(--spacing-m);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+}
+
+.tabs-example__details {
+    margin-top: var(--spacing-m);
+    padding-top: var(--spacing-m);
+    border-top: 1px solid var(--color-grey);
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--color-black);
+    opacity: 0.7;
+    font-family: 'Courier New', monospace;
+}
+
+.tabs-example__details span {
+    display: inline-block;
+    margin-right: var(--spacing-m);
+}
+
+.tabs-example__details strong {
+    font-weight: 600;
+    opacity: 1;
+}
+
+/* Responsividade para tabs */
+@media (max-width: 768px) {
+    .tabs-example__preview--vertical {
+        flex-direction: column;
+    }
+}
