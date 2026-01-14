@@ -78,16 +78,16 @@
 
 ## Formulários (Forms)
 
-- [ ] Criar componente de Input (estado default)
-- [ ] Criar componente de Input (estado focus)
-- [ ] Criar componente de Input (estado error)
-- [ ] Criar componente de Label para inputs
-- [ ] Criar componente de Checkbox (estado default)
-- [ ] Criar componente de Checkbox (estado checked)
-- [ ] Criar componente de Radio Button (estado default)
-- [ ] Criar componente de Radio Button (estado selected)
-- [ ] Criar seção de demonstração de formulários no HTML
-- [ ] Estilizar todos os estados dos componentes de formulário
+- [x] Criar componente de Input (estado default)
+- [x] Criar componente de Input (estado focus)
+- [x] Criar componente de Input (estado error)
+- [x] Criar componente de Label para inputs
+- [x] Criar componente de Checkbox (estado default)
+- [x] Criar componente de Checkbox (estado checked)
+- [x] Criar componente de Radio Button (estado default)
+- [x] Criar componente de Radio Button (estado selected)
+- [x] Criar seção de demonstração de formulários no HTML
+- [x] Estilizar todos os estados dos componentes de formulário
 
 ## Tabs (Abas)
 

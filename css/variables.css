@@ -49,4 +49,22 @@
     --button-border-radius: var(--border-radius);
     --button-min-height: 44px;
     --button-transition: var(--transition-base);
+
+    /* Formulários - Forms */
+    --input-padding-vertical: 12px;
+    --input-padding-horizontal: 16px;
+    --input-font-size: var(--font-size-paragraph);
+    --input-line-height: var(--line-height-paragraph);
+    --input-border-width: 1px;
+    --input-border-radius: var(--border-radius);
+    --input-min-height: 44px;
+    --input-transition: var(--transition-base);
+    --input-focus-outline-width: 2px;
+    --input-focus-outline-offset: 2px;
+    
+    /* Checkbox e Radio */
+    --checkbox-size: 20px;
+    --radio-size: 20px;
+    --checkbox-radio-border-width: 2px;
+    --checkbox-radio-transition: var(--transition-base);
 }

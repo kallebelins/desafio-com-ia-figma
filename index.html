@@ -265,6 +265,121 @@
                     </div>
                 </div>
             </section>
+
+            <section class="section" id="forms">
+                <h2>Formulários (Forms)</h2>
+                <p>Componentes de formulário do design system. Cada componente possui estados específicos (default, focus, error) para diferentes interações e validações do usuário. Os formulários são fundamentais para coleta de dados e interação com o usuário.</p>
+                
+                <div class="forms-section">
+                    <div class="forms-example">
+                        <div class="forms-example__label">Input - Campo de Texto</div>
+                        <div class="forms-example__description">Campo de entrada de texto com estados default, focus e error. Utiliza as cores do design system para feedback visual.</div>
+                        
+                        <div class="forms-example__preview">
+                            <div class="form-group">
+                                <label for="input-default" class="form-label">Label Default</label>
+                                <input type="text" id="input-default" class="form-input" placeholder="Digite seu texto aqui">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="input-focus" class="form-label">Label Focus</label>
+                                <input type="text" id="input-focus" class="form-input" placeholder="Clique para focar" autofocus>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="input-error" class="form-label">Label Error</label>
+                                <input type="text" id="input-error" class="form-input form-input--error" placeholder="Campo com erro" value="valor inválido">
+                                <span class="form-input-error">Este campo contém um erro</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="input-required" class="form-label form-label--required">Label Required</label>
+                                <input type="text" id="input-required" class="form-input" placeholder="Campo obrigatório">
+                            </div>
+                        </div>
+                        
+                        <div class="forms-example__details">
+                            <span><strong>Class:</strong> .form-input</span>
+                            <span><strong>Focus:</strong> border-color: var(--color-action)</span>
+                            <span><strong>Error:</strong> .form-input--error</span>
+                        </div>
+                    </div>
+
+                    <div class="forms-example">
+                        <div class="forms-example__label">Checkbox - Caixa de Seleção</div>
+                        <div class="forms-example__description">Componente de checkbox com estados default e checked. Utiliza a cor Action para indicar seleção.</div>
+                        
+                        <div class="forms-example__preview">
+                            <div class="form-group">
+                                <label class="form-checkbox">
+                                    <input type="checkbox" name="checkbox-default">
+                                    <span class="form-checkbox__box"></span>
+                                    <span class="form-checkbox__label">Checkbox Default</span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-checkbox">
+                                    <input type="checkbox" name="checkbox-checked" checked>
+                                    <span class="form-checkbox__box"></span>
+                                    <span class="form-checkbox__label">Checkbox Checked</span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-checkbox">
+                                    <input type="checkbox" name="checkbox-disabled" disabled>
+                                    <span class="form-checkbox__box"></span>
+                                    <span class="form-checkbox__label">Checkbox Disabled</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="forms-example__details">
+                            <span><strong>Class:</strong> .form-checkbox</span>
+                            <span><strong>Checked:</strong> background-color: var(--color-action)</span>
+                            <span><strong>Size:</strong> var(--checkbox-size)</span>
+                        </div>
+                    </div>
+
+                    <div class="forms-example">
+                        <div class="forms-example__label">Radio Button - Botão de Opção</div>
+                        <div class="forms-example__description">Componente de radio button com estados default e selected. Utiliza a cor Action para indicar seleção.</div>
+                        
+                        <div class="forms-example__preview">
+                            <div class="form-group">
+                                <label class="form-radio">
+                                    <input type="radio" name="radio-example" value="option1">
+                                    <span class="form-radio__circle"></span>
+                                    <span class="form-radio__label">Radio Default</span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-radio">
+                                    <input type="radio" name="radio-example" value="option2" checked>
+                                    <span class="form-radio__circle"></span>
+                                    <span class="form-radio__label">Radio Selected</span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-radio">
+                                    <input type="radio" name="radio-example-disabled" value="option3" disabled>
+                                    <span class="form-radio__circle"></span>
+                                    <span class="form-radio__label">Radio Disabled</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="forms-example__details">
+                            <span><strong>Class:</strong> .form-radio</span>
+                            <span><strong>Selected:</strong> border-color: var(--color-action)</span>
+                            <span><strong>Size:</strong> var(--radio-size)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
