@@ -137,3 +137,8 @@ Este projeto é baseado em um design da comunidade do Figma e está disponível 
 ## 📞 Suporte
 
 Para questões ou sugestões sobre este design system, consulte a documentação completa ou os arquivos de código fonte.
+
+Quer aprender como aplicar isso?
+
+- Assista ao tutorial completo: https://youtu.be/mnsToblh1z0
+- Baixe o meu livro MDPE Framework (Gratuito): https://zenodo.org/records/18158739
