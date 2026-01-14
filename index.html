@@ -380,6 +380,69 @@
                     </div>
                 </div>
             </section>
+
+            <section class="section" id="tabs">
+                <h2>Tabs (Abas)</h2>
+                <p>Componentes de tabs do design system. Cada componente possui estados específicos (default, hover, active) para diferentes interações do usuário. As tabs são utilizadas para organizar conteúdo em seções navegáveis, podendo ser dispostas horizontalmente ou verticalmente.</p>
+                
+                <div class="tabs-section">
+                    <div class="tabs-example">
+                        <div class="tabs-example__label">Tabs Horizontal</div>
+                        <div class="tabs-example__description">Componente de tabs dispostas horizontalmente. A tab ativa possui texto em negrito, cor cinza escuro e uma borda inferior azul (Action) de 2px. As tabs inativas possuem texto cinza claro com peso regular. No hover, as tabs inativas mantêm o texto cinza claro e exibem uma linha azul fina de 1px.</div>
+                        
+                        <div class="tabs-example__preview">
+                            <ul class="tabs tabs--horizontal" role="tablist">
+                                <li class="tabs__item tabs__item--active" role="presentation">
+                                    <button type="button" class="tabs__button" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1">Tab 1</button>
+                                </li>
+                                <li class="tabs__item" role="presentation">
+                                    <button type="button" class="tabs__button" role="tab" aria-selected="false" aria-controls="tab-panel-2" id="tab-2">Tab 2</button>
+                                </li>
+                                <li class="tabs__item" role="presentation">
+                                    <button type="button" class="tabs__button" role="tab" aria-selected="false" aria-controls="tab-panel-3" id="tab-3">Tab 3</button>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tabs-example__details">
+                            <span><strong>Class:</strong> .tabs .tabs--horizontal</span>
+                            <span><strong>Active:</strong> font-weight: 600, color: var(--color-black), border-bottom: 2px solid var(--color-action)</span>
+                            <span><strong>Hover:</strong> color: rgba(40,40,40,0.6), border-bottom: 1px solid var(--color-action)</span>
+                        </div>
+                    </div>
+
+                    <div class="tabs-example">
+                        <div class="tabs-example__label">Tabs Vertical</div>
+                        <div class="tabs-example__description">Componente de tabs dispostas verticalmente. A tab ativa possui texto em negrito, cor cinza escuro e uma borda direita azul (Action) de 2px. As tabs inativas possuem texto cinza claro com peso regular. No hover, as tabs inativas mantêm o texto cinza claro e exibem uma linha azul fina de 1px à esquerda.</div>
+                        
+                        <div class="tabs-example__preview tabs-example__preview--vertical">
+                            <ul class="tabs tabs--vertical" role="tablist">
+                                <li class="tabs__item tabs__item--active" role="presentation">
+                                    <button type="button" class="tabs__button" role="tab" aria-selected="true" aria-controls="tab-panel-v1" id="tab-v1">Tab 1</button>
+                                </li>
+                                <li class="tabs__item" role="presentation">
+                                    <button type="button" class="tabs__button" role="tab" aria-selected="false" aria-controls="tab-panel-v2" id="tab-v2">Tab 2</button>
+                                </li>
+                                <li class="tabs__item" role="presentation">
+                                    <button type="button" class="tabs__button" role="tab" aria-selected="false" aria-controls="tab-panel-v3" id="tab-v3">Tab 3</button>
+                                </li>
+                                <li class="tabs__item" role="presentation">
+                                    <button type="button" class="tabs__button" role="tab" aria-selected="false" aria-controls="tab-panel-v4" id="tab-v4">Tab 4</button>
+                                </li>
+                            </ul>
+                            <div class="tabs-example__content">
+                                <p>Conteúdo da tab selecionada apareceria aqui. Este é um exemplo de como o conteúdo pode ser exibido ao lado das tabs verticais.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tabs-example__details">
+                            <span><strong>Class:</strong> .tabs .tabs--vertical</span>
+                            <span><strong>Active:</strong> font-weight: 600, color: var(--color-black), border-right: 2px solid var(--color-action)</span>
+                            <span><strong>Hover:</strong> color: rgba(40,40,40,0.6), border-right: 1px solid var(--color-action)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 

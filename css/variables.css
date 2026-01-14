@@ -67,4 +67,19 @@
     --radio-size: 20px;
     --checkbox-radio-border-width: 2px;
     --checkbox-radio-transition: var(--transition-base);
+    
+    /* Tabs - Abas */
+    --tab-padding-vertical: 12px;
+    --tab-padding-horizontal: 20px;
+    --tab-font-size: var(--font-size-paragraph);
+    --tab-font-weight-active: 600;
+    --tab-font-weight-inactive: 400;
+    --tab-border-width-active: 2px;
+    --tab-border-width-hover: 1px;
+    --tab-border-radius: var(--border-radius);
+    --tab-transition: var(--transition-base);
+    --tab-active-border-color: var(--color-action);
+    --tab-hover-border-color: rgba(123, 185, 250, 0.6);
+    --tab-text-color-active: var(--color-black);
+    --tab-text-color-inactive: rgba(40, 40, 40, 0.6);
 }

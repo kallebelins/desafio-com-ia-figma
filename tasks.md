@@ -91,12 +91,12 @@
 
 ## Tabs (Abas)
 
-- [ ] Criar componente de Tabs Horizontal (estado default)
-- [ ] Criar componente de Tabs Horizontal (estado hover)
-- [ ] Criar componente de Tabs Vertical (estado default)
-- [ ] Criar componente de Tabs Vertical (estado hover)
-- [ ] Criar seção de demonstração de tabs no HTML
-- [ ] Estilizar todos os estados das tabs
+- [x] Criar componente de Tabs Horizontal (estado default)
+- [x] Criar componente de Tabs Horizontal (estado hover)
+- [x] Criar componente de Tabs Vertical (estado default)
+- [x] Criar componente de Tabs Vertical (estado hover)
+- [x] Criar seção de demonstração de tabs no HTML
+- [x] Estilizar todos os estados das tabs
 
 ## Componente de Exemplo - Formulário Sign Up
 
