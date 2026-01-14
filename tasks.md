@@ -56,14 +56,14 @@
 
 ## Espaçamento (Spacing)
 
-- [ ] Definir variáveis CSS para espaçamento XS (5px)
-- [ ] Definir variáveis CSS para espaçamento S (10px)
-- [ ] Definir variáveis CSS para espaçamento M (15px)
-- [ ] Definir variáveis CSS para espaçamento L (25px)
-- [ ] Definir variáveis CSS para espaçamento XL (40px)
-- [ ] Definir variáveis CSS para espaçamento XXL (65px)
-- [ ] Criar seção de demonstração de espaçamentos no HTML
-- [ ] Estilizar visualização de espaçamentos
+- [x] Definir variáveis CSS para espaçamento XS (5px)
+- [x] Definir variáveis CSS para espaçamento S (10px)
+- [x] Definir variáveis CSS para espaçamento M (15px)
+- [x] Definir variáveis CSS para espaçamento L (25px)
+- [x] Definir variáveis CSS para espaçamento XL (40px)
+- [x] Definir variáveis CSS para espaçamento XXL (65px)
+- [x] Criar seção de demonstração de espaçamentos no HTML
+- [x] Estilizar visualização de espaçamentos
 
 ## Botões (Buttons)
 
