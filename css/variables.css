@@ -40,4 +40,13 @@
     --container-max-width: 1200px;
     --border-radius: 4px;
     --transition-base: 0.3s ease;
+
+    /* Botões - Buttons */
+    --button-padding-vertical: 12px;
+    --button-padding-horizontal: 24px;
+    --button-font-size: var(--font-size-paragraph);
+    --button-font-weight: 600;
+    --button-border-radius: var(--border-radius);
+    --button-min-height: 44px;
+    --button-transition: var(--transition-base);
 }

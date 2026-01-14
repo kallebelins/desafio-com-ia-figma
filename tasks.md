@@ -67,14 +67,14 @@
 
 ## Botões (Buttons)
 
-- [ ] Criar componente de botão Primary (estado default)
-- [ ] Criar componente de botão Primary (estado hover)
-- [ ] Criar componente de botão Primary (estado disabled)
-- [ ] Criar componente de botão Alternative (estado default)
-- [ ] Criar componente de botão Alternative (estado hover)
-- [ ] Criar componente de botão Alternative (estado disabled)
-- [ ] Criar seção de demonstração de botões no HTML
-- [ ] Estilizar todos os estados dos botões
+- [x] Criar componente de botão Primary (estado default)
+- [x] Criar componente de botão Primary (estado hover)
+- [x] Criar componente de botão Primary (estado disabled)
+- [x] Criar componente de botão Alternative (estado default)
+- [x] Criar componente de botão Alternative (estado hover)
+- [x] Criar componente de botão Alternative (estado disabled)
+- [x] Criar seção de demonstração de botões no HTML
+- [x] Estilizar todos os estados dos botões
 
 ## Formulários (Forms)
 
