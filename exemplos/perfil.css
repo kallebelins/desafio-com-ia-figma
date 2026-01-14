@@ -1,0 +1,314 @@
+/* ============================================
+   Página Perfil do Usuário - Estilos Específicos
+   ============================================ */
+
+.perfil-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--color-secondary);
+    padding: var(--spacing-xl) var(--spacing-m);
+}
+
+.perfil-container {
+    width: 100%;
+    max-width: 700px;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-xl);
+}
+
+.perfil-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.perfil-header h1 {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-s);
+}
+
+.perfil-subtitle {
+    font-size: var(--font-size-paragraph);
+    line-height: var(--line-height-paragraph);
+    color: var(--color-black);
+    opacity: 0.7;
+}
+
+.perfil-main {
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Seção de Avatar */
+.perfil-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.perfil-avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-l);
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--color-grey);
+}
+
+.perfil-avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.perfil-avatar__image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-action);
+}
+
+.perfil-avatar__edit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--color-action);
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+    font-size: 16px;
+}
+
+.perfil-avatar__edit:hover {
+    background-color: var(--color-primary);
+    transform: scale(1.1);
+}
+
+.perfil-avatar__edit:focus {
+    outline: 2px solid var(--color-action);
+    outline-offset: 2px;
+}
+
+.perfil-info-basic {
+    text-align: center;
+}
+
+.perfil-name {
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-h3);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-xs);
+}
+
+.perfil-email {
+    font-size: var(--font-size-paragraph);
+    line-height: var(--line-height-paragraph);
+    color: var(--color-black);
+    opacity: 0.7;
+    margin-bottom: var(--spacing-s);
+}
+
+.perfil-bio {
+    font-size: var(--font-size-paragraph);
+    line-height: var(--line-height-paragraph);
+    color: var(--color-black);
+    opacity: 0.8;
+    max-width: 500px;
+}
+
+/* Tabs */
+.perfil-tabs-wrapper {
+    margin-bottom: var(--spacing-l);
+}
+
+.tab-panel {
+    display: block;
+}
+
+.tab-panel[hidden] {
+    display: none;
+}
+
+/* Formulário */
+.perfil-form {
+    width: 100%;
+}
+
+.perfil-section-config {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-l);
+    border-bottom: 1px solid var(--color-grey);
+}
+
+.perfil-section-config:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.perfil-section-title {
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-m);
+}
+
+.perfil-actions {
+    display: flex;
+    gap: var(--spacing-m);
+    margin-top: var(--spacing-l);
+    flex-wrap: wrap;
+}
+
+.perfil-actions .btn {
+    flex: 1;
+    min-width: 120px;
+}
+
+/* Textarea */
+.form-input--textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: var(--font-family-base);
+}
+
+/* Select */
+.form-input[type="text"],
+.form-input[type="email"],
+.form-input[type="tel"],
+.form-input[type="password"],
+.form-input[type="textarea"],
+select.form-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select.form-input {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23282828' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--spacing-m) center;
+    background-size: 12px;
+    padding-right: calc(var(--spacing-m) + 20px);
+    cursor: pointer;
+}
+
+select.form-input:focus {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237BB9FA' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+}
+
+/* Footer */
+.perfil-footer {
+    text-align: center;
+    padding-top: var(--spacing-l);
+    border-top: 1px solid var(--color-grey);
+}
+
+.perfil-footer p {
+    font-size: var(--font-size-paragraph);
+    line-height: var(--line-height-paragraph);
+    color: var(--color-black);
+    opacity: 0.7;
+    margin-bottom: 0;
+}
+
+.perfil-link {
+    color: var(--color-action);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-base);
+}
+
+.perfil-link:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.perfil-link:focus {
+    outline: 2px solid var(--color-action);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Checkbox groups */
+.form-group--checkbox {
+    margin-bottom: var(--spacing-m);
+}
+
+.form-group--checkbox:last-child {
+    margin-bottom: 0;
+}
+
+.form-group--checkbox .form-checkbox {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-group--checkbox .form-checkbox__label {
+    line-height: var(--line-height-paragraph);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .perfil-container {
+        padding: var(--spacing-l);
+    }
+
+    .perfil-header h1 {
+        font-size: var(--font-size-h3);
+        line-height: var(--line-height-h3);
+    }
+
+    .perfil-avatar-section {
+        gap: var(--spacing-m);
+    }
+
+    .perfil-avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .perfil-name {
+        font-size: var(--font-size-h4);
+        line-height: var(--line-height-h4);
+    }
+
+    .perfil-actions {
+        flex-direction: column;
+    }
+
+    .perfil-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .perfil-page {
+        padding: var(--spacing-m);
+    }
+
+    .perfil-container {
+        padding: var(--spacing-m);
+    }
+
+    .perfil-avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .perfil-avatar__edit {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+}

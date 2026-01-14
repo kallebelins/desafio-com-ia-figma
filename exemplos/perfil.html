@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de exemplo - Perfil do Usuário usando o Design System">
+    <title>Perfil do Usuário - Design System</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+    <div class="perfil-page">
+        <div class="perfil-container">
+            <header class="perfil-header">
+                <h1>Perfil do Usuário</h1>
+                <p class="perfil-subtitle">Gerencie suas informações pessoais e configurações</p>
+            </header>
+
+            <main class="perfil-main">
+                <!-- Seção de Avatar e Informações Básicas -->
+                <section class="perfil-section">
+                    <div class="perfil-avatar-section">
+                        <div class="perfil-avatar">
+                            <img src="https://via.placeholder.com/120" alt="Avatar do usuário" class="perfil-avatar__image" id="avatar-image">
+                            <button type="button" class="perfil-avatar__edit" id="edit-avatar-btn" aria-label="Editar avatar">
+                                <span class="perfil-avatar__edit-icon">✎</span>
+                            </button>
+                        </div>
+                        <div class="perfil-info-basic">
+                            <h2 class="perfil-name" id="display-name">João Silva</h2>
+                            <p class="perfil-email" id="display-email">joao.silva@example.com</p>
+                            <p class="perfil-bio" id="display-bio">Desenvolvedor de software apaixonado por criar soluções inovadoras.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tabs para diferentes seções -->
+                <div class="perfil-tabs-wrapper">
+                    <ul class="tabs tabs--horizontal" role="tablist" id="perfil-tabs">
+                        <li class="tabs__item tabs__item--active" role="presentation">
+                            <button type="button" class="tabs__button" role="tab" aria-selected="true" aria-controls="tab-informacoes" id="tab-informacoes-btn" data-tab="informacoes">
+                                Informações
+                            </button>
+                        </li>
+                        <li class="tabs__item" role="presentation">
+                            <button type="button" class="tabs__button" role="tab" aria-selected="false" aria-controls="tab-configuracoes" id="tab-configuracoes-btn" data-tab="configuracoes">
+                                Configurações
+                            </button>
+                        </li>
+                        <li class="tabs__item" role="presentation">
+                            <button type="button" class="tabs__button" role="tab" aria-selected="false" aria-controls="tab-seguranca" id="tab-seguranca-btn" data-tab="seguranca">
+                                Segurança
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tab Panel Informações -->
+                <div class="tab-panel" id="tab-informacoes" role="tabpanel" aria-labelledby="tab-informacoes-btn">
+                    <form class="perfil-form" id="perfil-form-informacoes" novalidate>
+                        <!-- Nome Completo -->
+                        <div class="form-group">
+                            <label for="fullname" class="form-label form-label--required">
+                                Nome Completo
+                            </label>
+                            <input 
+                                type="text" 
+                                id="fullname" 
+                                name="fullname" 
+                                class="form-input" 
+                                placeholder="Digite seu nome completo"
+                                value="João Silva"
+                                required
+                                aria-required="true"
+                            >
+                            <span class="form-input-error" id="fullname-error" role="alert"></span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email" class="form-label form-label--required">
+                                Email
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="Digite seu email"
+                                value="joao.silva@example.com"
+                                required
+                                aria-required="true"
+                            >
+                            <span class="form-input-error" id="email-error" role="alert"></span>
+                        </div>
+
+                        <!-- Telefone -->
+                        <div class="form-group">
+                            <label for="phone" class="form-label">
+                                Telefone
+                            </label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                class="form-input" 
+                                placeholder="(00) 00000-0000"
+                                value="(11) 98765-4321"
+                            >
+                            <span class="form-input-error" id="phone-error" role="alert"></span>
+                        </div>
+
+                        <!-- Bio -->
+                        <div class="form-group">
+                            <label for="bio" class="form-label">
+                                Biografia
+                            </label>
+                            <textarea 
+                                id="bio" 
+                                name="bio" 
+                                class="form-input form-input--textarea" 
+                                placeholder="Conte um pouco sobre você"
+                                rows="4"
+                            >Desenvolvedor de software apaixonado por criar soluções inovadoras.</textarea>
+                            <span class="form-input-error" id="bio-error" role="alert"></span>
+                        </div>
+
+                        <!-- Botões -->
+                        <div class="perfil-actions">
+                            <button type="submit" class="btn btn--primary">
+                                Salvar Alterações
+                            </button>
+                            <button type="button" class="btn btn--alternative" id="cancel-informacoes-btn">
+                                Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Tab Panel Configurações -->
+                <div class="tab-panel" id="tab-configuracoes" role="tabpanel" aria-labelledby="tab-configuracoes-btn" hidden>
+                    <form class="perfil-form" id="perfil-form-configuracoes" novalidate>
+                        <!-- Preferências de Notificação -->
+                        <div class="perfil-section-config">
+                            <h3 class="perfil-section-title">Preferências de Notificação</h3>
+                            
+                            <div class="form-group form-group--checkbox">
+                                <label class="form-checkbox">
+                                    <input 
+                                        type="checkbox" 
+                                        id="notify-email" 
+                                        name="notify-email"
+                                        checked
+                                    >
+                                    <span class="form-checkbox__box"></span>
+                                    <span class="form-checkbox__label">
+                                        Receber notificações por email
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-group form-group--checkbox">
+                                <label class="form-checkbox">
+                                    <input 
+                                        type="checkbox" 
+                                        id="notify-updates" 
+                                        name="notify-updates"
+                                        checked
+                                    >
+                                    <span class="form-checkbox__box"></span>
+                                    <span class="form-checkbox__label">
+                                        Notificar sobre atualizações do sistema
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-group form-group--checkbox">
+                                <label class="form-checkbox">
+                                    <input 
+                                        type="checkbox" 
+                                        id="notify-marketing" 
+                                        name="notify-marketing"
+                                    >
+                                    <span class="form-checkbox__box"></span>
+                                    <span class="form-checkbox__label">
+                                        Receber emails de marketing
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Idioma -->
+                        <div class="form-group">
+                            <label for="language" class="form-label">
+                                Idioma
+                            </label>
+                            <select 
+                                id="language" 
+                                name="language" 
+                                class="form-input"
+                            >
+                                <option value="pt-BR" selected>Português (Brasil)</option>
+                                <option value="en-US">English (US)</option>
+                                <option value="es-ES">Español</option>
+                            </select>
+                        </div>
+
+                        <!-- Fuso Horário -->
+                        <div class="form-group">
+                            <label for="timezone" class="form-label">
+                                Fuso Horário
+                            </label>
+                            <select 
+                                id="timezone" 
+                                name="timezone" 
+                                class="form-input"
+                            >
+                                <option value="America/Sao_Paulo" selected>America/São Paulo (GMT-3)</option>
+                                <option value="America/New_York">America/New York (GMT-5)</option>
+                                <option value="Europe/London">Europe/London (GMT+0)</option>
+                            </select>
+                        </div>
+
+                        <!-- Botões -->
+                        <div class="perfil-actions">
+                            <button type="submit" class="btn btn--primary">
+                                Salvar Configurações
+                            </button>
+                            <button type="button" class="btn btn--alternative" id="cancel-configuracoes-btn">
+                                Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Tab Panel Segurança -->
+                <div class="tab-panel" id="tab-seguranca" role="tabpanel" aria-labelledby="tab-seguranca-btn" hidden>
+                    <form class="perfil-form" id="perfil-form-seguranca" novalidate>
+                        <!-- Alterar Senha -->
+                        <div class="perfil-section-config">
+                            <h3 class="perfil-section-title">Alterar Senha</h3>
+                            
+                            <div class="form-group">
+                                <label for="current-password" class="form-label form-label--required">
+                                    Senha Atual
+                                </label>
+                                <input 
+                                    type="password" 
+                                    id="current-password" 
+                                    name="current-password" 
+                                    class="form-input" 
+                                    placeholder="Digite sua senha atual"
+                                    required
+                                    aria-required="true"
+                                >
+                                <span class="form-input-error" id="current-password-error" role="alert"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="new-password" class="form-label form-label--required">
+                                    Nova Senha
+                                </label>
+                                <input 
+                                    type="password" 
+                                    id="new-password" 
+                                    name="new-password" 
+                                    class="form-input" 
+                                    placeholder="Digite sua nova senha"
+                                    required
+                                    aria-required="true"
+                                >
+                                <span class="form-input-error" id="new-password-error" role="alert"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirm-password" class="form-label form-label--required">
+                                    Confirmar Nova Senha
+                                </label>
+                                <input 
+                                    type="password" 
+                                    id="confirm-password" 
+                                    name="confirm-password" 
+                                    class="form-input" 
+                                    placeholder="Confirme sua nova senha"
+                                    required
+                                    aria-required="true"
+                                >
+                                <span class="form-input-error" id="confirm-password-error" role="alert"></span>
+                            </div>
+                        </div>
+
+                        <!-- Autenticação de Dois Fatores -->
+                        <div class="perfil-section-config">
+                            <h3 class="perfil-section-title">Autenticação de Dois Fatores</h3>
+                            
+                            <div class="form-group form-group--checkbox">
+                                <label class="form-checkbox">
+                                    <input 
+                                        type="checkbox" 
+                                        id="two-factor" 
+                                        name="two-factor"
+                                    >
+                                    <span class="form-checkbox__box"></span>
+                                    <span class="form-checkbox__label">
+                                        Habilitar autenticação de dois fatores
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Botões -->
+                        <div class="perfil-actions">
+                            <button type="submit" class="btn btn--primary">
+                                Atualizar Senha
+                            </button>
+                            <button type="button" class="btn btn--alternative" id="cancel-seguranca-btn">
+                                Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+
+            <footer class="perfil-footer">
+                <p><a href="../index.html" class="perfil-link">← Voltar ao Design System</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="perfil.js"></script>
+</body>
+</html>

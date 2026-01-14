@@ -135,15 +135,15 @@ Tem a referência dessa página como um componente em https://www.figma.com/desi
 
 ### Perfil do Usuário
 
-- [ ] Criar página de Perfil do Usuário exibindo informações do usuário (avatar, nome, e-mail, bio, etc.).
-- [ ] Incluir exemplos de formulários de edição de perfil reutilizando componentes do design system.
-- [ ] Adicionar demonstração de listas de dados pessoais, opções de configuração e ações (botões).
+- [x] Criar página de Perfil do Usuário exibindo informações do usuário (avatar, nome, e-mail, bio, etc.).
+- [x] Incluir exemplos de formulários de edição de perfil reutilizando componentes do design system.
+- [x] Adicionar demonstração de listas de dados pessoais, opções de configuração e ações (botões).
 
 ### Cadastro em Sistema (Sign Up Page)
 
-- [ ] Criar página de Cadastro em Sistema separada, focada no fluxo de registro de novos usuários.
-- [ ] Destacar alternativas de autenticação (login social, e-mail/senha) utilizando componentes do design system para campos, botões e feedbacks.
-- [ ] Garantir clareza visual, validação de campos e responsividade no formulário de cadastro.
+- [x] Criar página de Cadastro em Sistema separada, focada no fluxo de registro de novos usuários.
+- [x] Destacar alternativas de autenticação (login social, e-mail/senha) utilizando componentes do design system para campos, botões e feedbacks.
+- [x] Garantir clareza visual, validação de campos e responsividade no formulário de cadastro.
 
 ## Documentação e Finalização
 

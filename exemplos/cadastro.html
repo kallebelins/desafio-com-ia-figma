@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de exemplo - Cadastro em Sistema usando o Design System">
+    <title>Cadastro em Sistema - Design System</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <div class="cadastro-page">
+        <div class="cadastro-container">
+            <header class="cadastro-header">
+                <h1>Cadastro em Sistema</h1>
+                <p class="cadastro-subtitle">Crie sua conta e comece a usar o sistema</p>
+            </header>
+
+            <main class="cadastro-main">
+                <!-- Autenticação Social -->
+                <div class="cadastro-social">
+                    <p class="cadastro-social__title">Cadastre-se com</p>
+                    <div class="cadastro-social__buttons">
+                        <button type="button" class="btn btn--social btn--google" aria-label="Cadastrar com Google">
+                            <span class="btn--social__icon">G</span>
+                            <span class="btn--social__text">Google</span>
+                        </button>
+                        <button type="button" class="btn btn--social btn--facebook" aria-label="Cadastrar com Facebook">
+                            <span class="btn--social__icon">f</span>
+                            <span class="btn--social__text">Facebook</span>
+                        </button>
+                    </div>
+                    <div class="cadastro-divider">
+                        <span class="cadastro-divider__line"></span>
+                        <span class="cadastro-divider__text">ou</span>
+                        <span class="cadastro-divider__line"></span>
+                    </div>
+                </div>
+
+                <!-- Formulário de Cadastro -->
+                <form class="cadastro-form" id="cadastro-form" novalidate>
+                    <!-- Nome Completo -->
+                    <div class="form-group">
+                        <label for="nome-completo" class="form-label form-label--required">
+                            Nome Completo
+                        </label>
+                        <input 
+                            type="text" 
+                            id="nome-completo" 
+                            name="nome-completo" 
+                            class="form-input" 
+                            placeholder="Digite seu nome completo"
+                            required
+                            aria-required="true"
+                        >
+                        <span class="form-input-error" id="nome-completo-error" role="alert"></span>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email" class="form-label form-label--required">
+                            E-mail
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="Digite seu e-mail"
+                            required
+                            aria-required="true"
+                        >
+                        <span class="form-input-error" id="email-error" role="alert"></span>
+                    </div>
+
+                    <!-- Senha -->
+                    <div class="form-group">
+                        <label for="senha" class="form-label form-label--required">
+                            Senha
+                        </label>
+                        <input 
+                            type="password" 
+                            id="senha" 
+                            name="senha" 
+                            class="form-input" 
+                            placeholder="Digite sua senha"
+                            required
+                            aria-required="true"
+                        >
+                        <span class="form-input-error" id="senha-error" role="alert"></span>
+                        <p class="form-hint">A senha deve ter pelo menos 8 caracteres</p>
+                    </div>
+
+                    <!-- Confirmar Senha -->
+                    <div class="form-group">
+                        <label for="confirmar-senha" class="form-label form-label--required">
+                            Confirmar Senha
+                        </label>
+                        <input 
+                            type="password" 
+                            id="confirmar-senha" 
+                            name="confirmar-senha" 
+                            class="form-input" 
+                            placeholder="Digite novamente sua senha"
+                            required
+                            aria-required="true"
+                        >
+                        <span class="form-input-error" id="confirmar-senha-error" role="alert"></span>
+                    </div>
+
+                    <!-- Telefone (Opcional) -->
+                    <div class="form-group">
+                        <label for="telefone" class="form-label">
+                            Telefone
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="telefone" 
+                            name="telefone" 
+                            class="form-input" 
+                            placeholder="(00) 00000-0000"
+                        >
+                        <span class="form-input-error" id="telefone-error" role="alert"></span>
+                    </div>
+
+                    <!-- Checkbox de Termos -->
+                    <div class="form-group form-group--checkbox">
+                        <label class="form-checkbox">
+                            <input 
+                                type="checkbox" 
+                                id="termos" 
+                                name="termos" 
+                                required
+                                aria-required="true"
+                            >
+                            <span class="form-checkbox__box"></span>
+                            <span class="form-checkbox__label">
+                                Eu aceito os <a href="#" class="cadastro-link">termos de uso</a> e a <a href="#" class="cadastro-link">política de privacidade</a>
+                            </span>
+                        </label>
+                        <span class="form-input-error" id="termos-error" role="alert"></span>
+                    </div>
+
+                    <!-- Checkbox de Newsletter (Opcional) -->
+                    <div class="form-group form-group--checkbox">
+                        <label class="form-checkbox">
+                            <input 
+                                type="checkbox" 
+                                id="newsletter" 
+                                name="newsletter"
+                            >
+                            <span class="form-checkbox__box"></span>
+                            <span class="form-checkbox__label">
+                                Desejo receber novidades e atualizações por e-mail
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Botões -->
+                    <div class="cadastro-actions">
+                        <button type="submit" class="btn btn--primary">
+                            Criar Conta
+                        </button>
+                        <button type="button" class="btn btn--alternative" id="cancel-btn">
+                            Cancelar
+                        </button>
+                    </div>
+                </form>
+            </main>
+
+            <footer class="cadastro-footer">
+                <p>Já possui uma conta? <a href="#" class="cadastro-link">Faça login aqui</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="cadastro.js"></script>
+</body>
+</html>
