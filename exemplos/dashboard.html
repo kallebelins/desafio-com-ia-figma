@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de exemplo - Dashboard usando o Design System">
+    <title>Dashboard - Design System</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-page">
+        <div class="dashboard-container">
+            <header class="dashboard-header">
+                <h1>Dashboard</h1>
+                <p class="dashboard-subtitle">Visão geral do sistema</p>
+            </header>
+
+            <main class="dashboard-main">
+                <!-- Tabs de Navegação -->
+                <div class="dashboard-tabs-wrapper">
+                    <ul class="tabs tabs--horizontal" role="tablist" id="dashboard-tabs">
+                        <li class="tabs__item tabs__item--active" role="presentation">
+                            <button type="button" class="tabs__button" role="tab" aria-selected="true" aria-controls="tab-overview" id="tab-overview-btn" data-tab="overview">
+                                Overview
+                            </button>
+                        </li>
+                        <li class="tabs__item" role="presentation">
+                            <button type="button" class="tabs__button" role="tab" aria-selected="false" aria-controls="tab-analytics" id="tab-analytics-btn" data-tab="analytics">
+                                Analytics
+                            </button>
+                        </li>
+                        <li class="tabs__item" role="presentation">
+                            <button type="button" class="tabs__button" role="tab" aria-selected="false" aria-controls="tab-users" id="tab-users-btn" data-tab="users">
+                                Users
+                            </button>
+                        </li>
+                        <li class="tabs__item" role="presentation">
+                            <button type="button" class="tabs__button" role="tab" aria-selected="false" aria-controls="tab-settings" id="tab-settings-btn" data-tab="settings">
+                                Settings
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tab Panel Overview -->
+                <div class="tab-panel" id="tab-overview" role="tabpanel" aria-labelledby="tab-overview-btn">
+                    <!-- Cards de Resumo -->
+                    <div class="dashboard-cards">
+                        <div class="dashboard-card">
+                            <div class="dashboard-card__header">
+                                <h3 class="dashboard-card__title">Total de Usuários</h3>
+                            </div>
+                            <div class="dashboard-card__content">
+                                <p class="dashboard-card__value">1,234</p>
+                                <p class="dashboard-card__change dashboard-card__change--positive">+12% este mês</p>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <div class="dashboard-card__header">
+                                <h3 class="dashboard-card__title">Vendas</h3>
+                            </div>
+                            <div class="dashboard-card__content">
+                                <p class="dashboard-card__value">R$ 45.678</p>
+                                <p class="dashboard-card__change dashboard-card__change--positive">+8% este mês</p>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <div class="dashboard-card__header">
+                                <h3 class="dashboard-card__title">Pedidos</h3>
+                            </div>
+                            <div class="dashboard-card__content">
+                                <p class="dashboard-card__value">567</p>
+                                <p class="dashboard-card__change dashboard-card__change--negative">-3% este mês</p>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <div class="dashboard-card__header">
+                                <h3 class="dashboard-card__title">Taxa de Conversão</h3>
+                            </div>
+                            <div class="dashboard-card__content">
+                                <p class="dashboard-card__value">3.2%</p>
+                                <p class="dashboard-card__change dashboard-card__change--positive">+0.5% este mês</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tabela de Dados Recentes -->
+                    <div class="dashboard-section">
+                        <h2 class="dashboard-section__title">Atividades Recentes</h2>
+                        <div class="dashboard-table-wrapper">
+                            <table class="dashboard-table">
+                                <thead>
+                                    <tr>
+                                        <th>Usuário</th>
+                                        <th>Ação</th>
+                                        <th>Data</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>João Silva</td>
+                                        <td>Novo pedido criado</td>
+                                        <td>15/01/2024</td>
+                                        <td><span class="dashboard-badge dashboard-badge--success">Ativo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maria Santos</td>
+                                        <td>Perfil atualizado</td>
+                                        <td>14/01/2024</td>
+                                        <td><span class="dashboard-badge dashboard-badge--success">Ativo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pedro Costa</td>
+                                        <td>Pagamento processado</td>
+                                        <td>14/01/2024</td>
+                                        <td><span class="dashboard-badge dashboard-badge--warning">Pendente</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ana Oliveira</td>
+                                        <td>Conta criada</td>
+                                        <td>13/01/2024</td>
+                                        <td><span class="dashboard-badge dashboard-badge--success">Ativo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carlos Souza</td>
+                                        <td>Produto adicionado</td>
+                                        <td>13/01/2024</td>
+                                        <td><span class="dashboard-badge dashboard-badge--error">Erro</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Panel Analytics -->
+                <div class="tab-panel" id="tab-analytics" role="tabpanel" aria-labelledby="tab-analytics-btn" hidden>
+                    <div class="dashboard-section">
+                        <h2 class="dashboard-section__title">Análise de Dados</h2>
+                        <p class="dashboard-section__description">Visualize métricas e tendências do seu sistema.</p>
+                        
+                        <div class="dashboard-cards">
+                            <div class="dashboard-card dashboard-card--large">
+                                <div class="dashboard-card__header">
+                                    <h3 class="dashboard-card__title">Visitas do Mês</h3>
+                                </div>
+                                <div class="dashboard-card__content">
+                                    <p class="dashboard-card__value">12,456</p>
+                                    <p class="dashboard-card__description">Aumento de 23% em relação ao mês anterior</p>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card dashboard-card--large">
+                                <div class="dashboard-card__header">
+                                    <h3 class="dashboard-card__title">Tempo Médio de Sessão</h3>
+                                </div>
+                                <div class="dashboard-card__content">
+                                    <p class="dashboard-card__value">4m 32s</p>
+                                    <p class="dashboard-card__description">Tempo médio de permanência no site</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-section">
+                            <h3 class="dashboard-section__subtitle">Principais Fontes de Tráfego</h3>
+                            <div class="dashboard-list">
+                                <div class="dashboard-list__item">
+                                    <span class="dashboard-list__label">Busca Orgânica</span>
+                                    <span class="dashboard-list__value">45%</span>
+                                </div>
+                                <div class="dashboard-list__item">
+                                    <span class="dashboard-list__label">Redes Sociais</span>
+                                    <span class="dashboard-list__value">30%</span>
+                                </div>
+                                <div class="dashboard-list__item">
+                                    <span class="dashboard-list__label">Direto</span>
+                                    <span class="dashboard-list__value">15%</span>
+                                </div>
+                                <div class="dashboard-list__item">
+                                    <span class="dashboard-list__label">Referência</span>
+                                    <span class="dashboard-list__value">10%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Panel Users -->
+                <div class="tab-panel" id="tab-users" role="tabpanel" aria-labelledby="tab-users-btn" hidden>
+                    <div class="dashboard-section">
+                        <h2 class="dashboard-section__title">Gerenciamento de Usuários</h2>
+                        <p class="dashboard-section__description">Visualize e gerencie os usuários do sistema.</p>
+
+                        <div class="dashboard-actions">
+                            <button type="button" class="btn btn--primary">Adicionar Usuário</button>
+                            <button type="button" class="btn btn--alternative">Exportar Lista</button>
+                        </div>
+
+                        <div class="dashboard-table-wrapper">
+                            <table class="dashboard-table">
+                                <thead>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Email</th>
+                                        <th>Função</th>
+                                        <th>Status</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>João Silva</td>
+                                        <td>joao.silva@example.com</td>
+                                        <td>Administrador</td>
+                                        <td><span class="dashboard-badge dashboard-badge--success">Ativo</span></td>
+                                        <td>
+                                            <button type="button" class="btn btn--alternative btn--small">Editar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maria Santos</td>
+                                        <td>maria.santos@example.com</td>
+                                        <td>Editor</td>
+                                        <td><span class="dashboard-badge dashboard-badge--success">Ativo</span></td>
+                                        <td>
+                                            <button type="button" class="btn btn--alternative btn--small">Editar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pedro Costa</td>
+                                        <td>pedro.costa@example.com</td>
+                                        <td>Usuário</td>
+                                        <td><span class="dashboard-badge dashboard-badge--warning">Pendente</span></td>
+                                        <td>
+                                            <button type="button" class="btn btn--alternative btn--small">Editar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ana Oliveira</td>
+                                        <td>ana.oliveira@example.com</td>
+                                        <td>Usuário</td>
+                                        <td><span class="dashboard-badge dashboard-badge--success">Ativo</span></td>
+                                        <td>
+                                            <button type="button" class="btn btn--alternative btn--small">Editar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Panel Settings -->
+                <div class="tab-panel" id="tab-settings" role="tabpanel" aria-labelledby="tab-settings-btn" hidden>
+                    <div class="dashboard-section">
+                        <h2 class="dashboard-section__title">Configurações</h2>
+                        <p class="dashboard-section__description">Gerencie as configurações do sistema.</p>
+
+                        <form class="dashboard-form" id="settings-form">
+                            <div class="form-group">
+                                <label for="site-name" class="form-label form-label--required">
+                                    Nome do Site
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="site-name" 
+                                    name="site-name" 
+                                    class="form-input" 
+                                    placeholder="Digite o nome do site"
+                                    value="Meu Sistema"
+                                    required
+                                    aria-required="true"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="site-email" class="form-label form-label--required">
+                                    Email de Contato
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="site-email" 
+                                    name="site-email" 
+                                    class="form-input" 
+                                    placeholder="contato@example.com"
+                                    value="contato@example.com"
+                                    required
+                                    aria-required="true"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="timezone" class="form-label">
+                                    Fuso Horário
+                                </label>
+                                <select id="timezone" name="timezone" class="form-input">
+                                    <option value="America/Sao_Paulo" selected>America/Sao_Paulo (GMT-3)</option>
+                                    <option value="America/New_York">America/New_York (GMT-5)</option>
+                                    <option value="Europe/London">Europe/London (GMT+0)</option>
+                                    <option value="Asia/Tokyo">Asia/Tokyo (GMT+9)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group form-group--checkbox">
+                                <label class="form-checkbox">
+                                    <input 
+                                        type="checkbox" 
+                                        id="notifications" 
+                                        name="notifications"
+                                        checked
+                                    >
+                                    <span class="form-checkbox__box"></span>
+                                    <span class="form-checkbox__label">
+                                        Habilitar notificações por email
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="form-group form-group--checkbox">
+                                <label class="form-checkbox">
+                                    <input 
+                                        type="checkbox" 
+                                        id="maintenance" 
+                                        name="maintenance"
+                                    >
+                                    <span class="form-checkbox__box"></span>
+                                    <span class="form-checkbox__label">
+                                        Modo de manutenção ativo
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="dashboard-actions">
+                                <button type="submit" class="btn btn--primary">
+                                    Salvar Configurações
+                                </button>
+                                <button type="button" class="btn btn--alternative" id="reset-btn">
+                                    Restaurar Padrões
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="dashboard-footer">
+                <p><a href="../index.html" class="dashboard-link">← Voltar ao Design System</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

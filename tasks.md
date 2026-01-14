@@ -129,9 +129,9 @@ Tem a referência dessa página como um componente em https://www.figma.com/desi
 
 ### Dashboard
 
-- [ ] Criar página de Dashboard com layout básico usando o design system (cards, gráficos ou resumos, navegação lateral/superior).
-- [ ] Demonstrar uso de componentes como cards, tabelas e abas no contexto do Dashboard.
-- [ ] Garantir responsividade da página e uso consistente do design system.
+- [x] Criar página de Dashboard com layout básico usando o design system (cards, gráficos ou resumos, navegação lateral/superior).
+- [x] Demonstrar uso de componentes como cards, tabelas e abas no contexto do Dashboard.
+- [x] Garantir responsividade da página e uso consistente do design system.
 
 ### Perfil do Usuário
 
