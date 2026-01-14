@@ -3,6 +3,11 @@
    Estilos específicos para a página de demonstração
    ============================================ */
 
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Layout da Página de Demonstração */
 .container {
     max-width: var(--container-max-width);
@@ -11,9 +16,10 @@
 }
 
 .header {
-    background-color: var(--color-secondary);
-    padding: var(--spacing-xl) 0;
-    border-bottom: 1px solid var(--color-grey);
+    background: linear-gradient(135deg, var(--color-secondary) 0%, #fff 100%);
+    padding: var(--spacing-xxl) 0;
+    border-bottom: 2px solid var(--color-grey);
+    text-align: center;
 }
 
 .header h1 {
@@ -29,6 +35,43 @@
     opacity: 0.7;
 }
 
+/* Navigation Bar */
+.docs-nav {
+    position: sticky;
+    top: 0;
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-grey);
+    padding: var(--spacing-m) 0;
+    margin-bottom: var(--spacing-xl);
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.docs-nav__list {
+    display: flex;
+    gap: var(--spacing-l);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.docs-nav__link {
+    color: var(--color-black);
+    text-decoration: none;
+    padding: var(--spacing-s) var(--spacing-m);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.docs-nav__link:hover {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
 .main {
     min-height: calc(100vh - 200px);
     padding: var(--spacing-xl) 0;
@@ -36,13 +79,20 @@
 
 .section {
     margin-bottom: var(--spacing-xxl);
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--color-grey);
+}
+
+.section:last-child {
+    border-bottom: none;
 }
 
 .section h2 {
     font-size: var(--font-size-h2);
     line-height: var(--line-height-h2);
-    color: var(--color-black);
+    color: var(--color-primary);
     margin-bottom: var(--spacing-m);
+    font-weight: 600;
 }
 
 .section p {
@@ -80,11 +130,13 @@
     border: 1px solid var(--color-grey);
     border-radius: var(--border-radius);
     overflow: hidden;
-    transition: box-shadow var(--transition-base);
+    transition: all var(--transition-base);
 }
 
 .color-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+    border-color: var(--color-action);
 }
 
 .color-card__swatch {
@@ -158,7 +210,7 @@
 }
 
 .typography-example {
-    background-color: var(--color-white);
+    background-color: var(--color-secondary);
     border: 1px solid var(--color-grey);
     border-radius: var(--border-radius);
     padding: var(--spacing-l);
@@ -211,7 +263,7 @@
 }
 
 .spacing-example {
-    background-color: var(--color-white);
+    background-color: var(--color-secondary);
     border: 1px solid var(--color-grey);
     border-radius: var(--border-radius);
     padding: var(--spacing-l);
@@ -314,12 +366,12 @@
     .spacing-example__visual {
         min-height: 60px;
     }
-    
+
     .spacing-example__box {
         width: 30px;
         height: 30px;
     }
-    
+
     .spacing-example__gap {
         height: 30px;
     }
@@ -341,7 +393,7 @@
 }
 
 .buttons-example {
-    background-color: var(--color-white);
+    background-color: var(--color-secondary);
     border: 1px solid var(--color-grey);
     border-radius: var(--border-radius);
     padding: var(--spacing-l);
@@ -390,7 +442,7 @@
     .buttons-group {
         flex-direction: column;
     }
-    
+
     .btn {
         width: 100%;
     }
@@ -405,7 +457,7 @@
 }
 
 .forms-example {
-    background-color: var(--color-white);
+    background-color: var(--color-secondary);
     border: 1px solid var(--color-grey);
     border-radius: var(--border-radius);
     padding: var(--spacing-l);
@@ -462,7 +514,7 @@
 }
 
 .tabs-example {
-    background-color: var(--color-white);
+    background-color: var(--color-secondary);
     border: 1px solid var(--color-grey);
     border-radius: var(--border-radius);
     padding: var(--spacing-l);
@@ -545,15 +597,17 @@
 }
 
 .example-card {
-    background-color: var(--color-white);
+    background-color: var(--color-secondary);
     border: 1px solid var(--color-grey);
     border-radius: var(--border-radius);
     padding: var(--spacing-l);
-    transition: box-shadow var(--transition-base);
+    transition: all var(--transition-base);
 }
 
 .example-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
 }
 
 .example-card__title {

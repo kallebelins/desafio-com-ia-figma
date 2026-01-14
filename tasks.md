@@ -155,3 +155,8 @@ Tem a referência dessa página como um componente em https://www.figma.com/desi
 - [x] Testar em diferentes navegadores
 - [x] Garantir acessibilidade básica (ARIA labels, contraste)
 - [x] Otimizar CSS para produção
+
+
+## Revisão
+
+- [x] Revisar index.html
