@@ -36,13 +36,13 @@
 
 ## Cores (Color Palette)
 
-- [ ] Definir variáveis CSS para cor Primary (#F34E4E)
-- [ ] Definir variáveis CSS para cor Secondary (#FFF6EA)
-- [ ] Definir variáveis CSS para cor Action (#7BB9FA)
-- [ ] Definir variáveis CSS para cor Grey (#D0D0D0)
-- [ ] Definir variáveis CSS para cor Black (#282828)
-- [ ] Criar seção de demonstração de cores no HTML
-- [ ] Estilizar cards de demonstração de cores
+- [x] Definir variáveis CSS para cor Primary (#F34E4E)
+- [x] Definir variáveis CSS para cor Secondary (#FFF6EA)
+- [x] Definir variáveis CSS para cor Action (#7BB9FA)
+- [x] Definir variáveis CSS para cor Grey (#D0D0D0)
+- [x] Definir variáveis CSS para cor Black (#282828)
+- [x] Criar seção de demonstração de cores no HTML
+- [x] Estilizar cards de demonstração de cores
 
 ## Tipografia (Typography)
 
