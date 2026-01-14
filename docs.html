@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentação completa do Design System - Guia de uso de componentes, variáveis CSS e exemplos de código">
+    <title>Documentação - Design System</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .docs-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-xl);
+        }
+
+        .docs-nav {
+            position: sticky;
+            top: 0;
+            background: var(--color-white);
+            border-bottom: 1px solid var(--color-grey);
+            padding: var(--spacing-m) 0;
+            margin-bottom: var(--spacing-xl);
+            z-index: 100;
+        }
+
+        .docs-nav__list {
+            display: flex;
+            gap: var(--spacing-l);
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        .docs-nav__link {
+            color: var(--color-black);
+            text-decoration: none;
+            padding: var(--spacing-s) var(--spacing-m);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .docs-nav__link:hover {
+            background: var(--color-secondary);
+            color: var(--color-primary);
+        }
+
+        .docs-section {
+            margin-bottom: var(--spacing-xxl);
+            padding-bottom: var(--spacing-xl);
+            border-bottom: 1px solid var(--color-grey);
+        }
+
+        .docs-section:last-child {
+            border-bottom: none;
+        }
+
+        .docs-section__title {
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-l);
+        }
+
+        .docs-component {
+            background: var(--color-secondary);
+            padding: var(--spacing-l);
+            border-radius: 8px;
+            margin-bottom: var(--spacing-l);
+        }
+
+        .docs-component__name {
+            color: var(--color-black);
+            margin-bottom: var(--spacing-m);
+        }
+
+        .docs-component__description {
+            margin-bottom: var(--spacing-m);
+            line-height: 1.6;
+        }
+
+        .docs-code {
+            background: #282828;
+            color: #f8f8f2;
+            padding: var(--spacing-m);
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: var(--spacing-m) 0;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .docs-code__comment {
+            color: #6a9955;
+        }
+
+        .docs-code__tag {
+            color: #569cd6;
+        }
+
+        .docs-code__attr {
+            color: #9cdcfe;
+        }
+
+        .docs-code__value {
+            color: #ce9178;
+        }
+
+        .docs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-m) 0;
+        }
+
+        .docs-table th,
+        .docs-table td {
+            padding: var(--spacing-s) var(--spacing-m);
+            text-align: left;
+            border: 1px solid var(--color-grey);
+        }
+
+        .docs-table th {
+            background: var(--color-secondary);
+            font-weight: 600;
+            color: var(--color-black);
+        }
+
+        .docs-table code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+        }
+
+        .docs-preview {
+            background: var(--color-white);
+            padding: var(--spacing-l);
+            border: 1px solid var(--color-grey);
+            border-radius: 4px;
+            margin: var(--spacing-m) 0;
+        }
+
+        .docs-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: var(--spacing-s);
+        }
+
+        .docs-badge--required {
+            background: #ffe0e0;
+            color: #d32f2f;
+        }
+
+        .docs-badge--optional {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: var(--spacing-l);
+            color: var(--color-action);
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Documentação do Design System</h1>
+            <p class="subtitle">Guia completo de uso de componentes e variáveis</p>
+        </div>
+    </header>
+
+    <nav class="docs-nav">
+        <div class="container">
+            <ul class="docs-nav__list">
+                <li><a href="#introducao" class="docs-nav__link">Introdução</a></li>
+                <li><a href="#variaveis" class="docs-nav__link">Variáveis CSS</a></li>
+                <li><a href="#cores" class="docs-nav__link">Cores</a></li>
+                <li><a href="#tipografia" class="docs-nav__link">Tipografia</a></li>
+                <li><a href="#espacamento" class="docs-nav__link">Espaçamento</a></li>
+                <li><a href="#botoes" class="docs-nav__link">Botões</a></li>
+                <li><a href="#formularios" class="docs-nav__link">Formulários</a></li>
+                <li><a href="#tabs" class="docs-nav__link">Tabs</a></li>
+                <li><a href="#acessibilidade" class="docs-nav__link">Acessibilidade</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="docs-container">
+        <a href="index.html" class="back-link">← Voltar para o Design System</a>
+
+        <!-- Introdução -->
+        <section class="docs-section" id="introducao">
+            <h2 class="docs-section__title">Introdução</h2>
+            <p>Bem-vindo à documentação completa do Design System. Este guia fornece informações detalhadas sobre como usar cada componente, variáveis CSS disponíveis e melhores práticas de implementação.</p>
+            
+            <h3>Como Começar</h3>
+            <p>Para usar o Design System em seu projeto, inclua os seguintes arquivos CSS:</p>
+            
+            <pre class="docs-code"><span class="docs-code__comment">&lt;!-- Variáveis CSS (obrigatório) --&gt;</span>
+<span class="docs-code__tag">&lt;link</span> <span class="docs-code__attr">rel</span>=<span class="docs-code__value">"stylesheet"</span> <span class="docs-code__attr">href</span>=<span class="docs-code__value">"css/variables.css"</span><span class="docs-code__tag">&gt;</span>
+
+<span class="docs-code__comment">&lt;!-- Estilos dos componentes (obrigatório) --&gt;</span>
+<span class="docs-code__tag">&lt;link</span> <span class="docs-code__attr">rel</span>=<span class="docs-code__value">"stylesheet"</span> <span class="docs-code__attr">href</span>=<span class="docs-code__value">"css/styles.css"</span><span class="docs-code__tag">&gt;</span>
+
+<span class="docs-code__comment">&lt;!-- Estilos auxiliares (opcional) --&gt;</span>
+<span class="docs-code__tag">&lt;link</span> <span class="docs-code__attr">rel</span>=<span class="docs-code__value">"stylesheet"</span> <span class="docs-code__attr">href</span>=<span class="docs-code__value">"css/index.css"</span><span class="docs-code__tag">&gt;</span></pre>
+
+            <h3>Estrutura de Arquivos</h3>
+            <ul>
+                <li><strong>variables.css</strong> - Contém todas as variáveis CSS (cores, espaçamentos, tipografia)</li>
+                <li><strong>styles.css</strong> - Contém os estilos dos componentes do design system</li>
+                <li><strong>index.css</strong> - Contém estilos auxiliares para demonstração e layout</li>
+            </ul>
+        </section>
+
+        <!-- Variáveis CSS -->
+        <section class="docs-section" id="variaveis">
+            <h2 class="docs-section__title">Variáveis CSS</h2>
+            <p>Todas as variáveis CSS estão definidas no arquivo <code>css/variables.css</code> e podem ser facilmente customizadas para atender às necessidades do seu projeto.</p>
+
+            <h3>Cores</h3>
+            <table class="docs-table">
+                <thead>
+                    <tr>
+                        <th>Variável</th>
+                        <th>Valor</th>
+                        <th>Uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>--color-primary</code></td>
+                        <td>#F34E4E</td>
+                        <td>Cor principal, usada em botões primários e destaques</td>
+                    </tr>
+                    <tr>
+                        <td><code>--color-secondary</code></td>
+                        <td>#FFF6EA</td>
+                        <td>Cor secundária, usada em backgrounds e botões alternativos</td>
+                    </tr>
+                    <tr>
+                        <td><code>--color-action</code></td>
+                        <td>#7BB9FA</td>
+                        <td>Cor de ação, usada em links, focus states e elementos interativos</td>
+                    </tr>
+                    <tr>
+                        <td><code>--color-grey</code></td>
+                        <td>#D0D0D0</td>
+                        <td>Cor cinza, usada em bordas e elementos desabilitados</td>
+                    </tr>
+                    <tr>
+                        <td><code>--color-black</code></td>
+                        <td>#282828</td>
+                        <td>Cor preta, usada em textos e elementos escuros</td>
+                    </tr>
+                    <tr>
+                        <td><code>--color-white</code></td>
+                        <td>#FFFFFF</td>
+                        <td>Cor branca, usada em backgrounds e textos sobre cores escuras</td>
+                    </tr>
+                    <tr>
+                        <td><code>--color-error</code></td>
+                        <td>#FF0000</td>
+                        <td>Cor de erro, usada em mensagens de erro e validações</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Tipografia</h3>
+            <table class="docs-table">
+                <thead>
+                    <tr>
+                        <th>Variável</th>
+                        <th>Valor</th>
+                        <th>Uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>--font-size-h1</code></td>
+                        <td>48px</td>
+                        <td>Tamanho de fonte para H1</td>
+                    </tr>
+                    <tr>
+                        <td><code>--line-height-h1</code></td>
+                        <td>60px</td>
+                        <td>Altura de linha para H1</td>
+                    </tr>
+                    <tr>
+                        <td><code>--font-size-h2</code></td>
+                        <td>34px</td>
+                        <td>Tamanho de fonte para H2</td>
+                    </tr>
+                    <tr>
+                        <td><code>--line-height-h2</code></td>
+                        <td>50px</td>
+                        <td>Altura de linha para H2</td>
+                    </tr>
+                    <tr>
+                        <td><code>--font-size-h3</code></td>
+                        <td>28px</td>
+                        <td>Tamanho de fonte para H3</td>
+                    </tr>
+                    <tr>
+                        <td><code>--line-height-h3</code></td>
+                        <td>38px</td>
+                        <td>Altura de linha para H3</td>
+                    </tr>
+                    <tr>
+                        <td><code>--font-size-h4</code></td>
+                        <td>18px</td>
+                        <td>Tamanho de fonte para H4</td>
+                    </tr>
+                    <tr>
+                        <td><code>--line-height-h4</code></td>
+                        <td>22px</td>
+                        <td>Altura de linha para H4</td>
+                    </tr>
+                    <tr>
+                        <td><code>--font-size-paragraph</code></td>
+                        <td>14px</td>
+                        <td>Tamanho de fonte para parágrafos</td>
+                    </tr>
+                    <tr>
+                        <td><code>--line-height-paragraph</code></td>
+                        <td>24px</td>
+                        <td>Altura de linha para parágrafos</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Espaçamento</h3>
+            <table class="docs-table">
+                <thead>
+                    <tr>
+                        <th>Variável</th>
+                        <th>Valor</th>
+                        <th>Uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>--spacing-xs</code></td>
+                        <td>5px</td>
+                        <td>Espaçamento extra pequeno</td>
+                    </tr>
+                    <tr>
+                        <td><code>--spacing-s</code></td>
+                        <td>10px</td>
+                        <td>Espaçamento pequeno</td>
+                    </tr>
+                    <tr>
+                        <td><code>--spacing-m</code></td>
+                        <td>15px</td>
+                        <td>Espaçamento médio</td>
+                    </tr>
+                    <tr>
+                        <td><code>--spacing-l</code></td>
+                        <td>25px</td>
+                        <td>Espaçamento grande</td>
+                    </tr>
+                    <tr>
+                        <td><code>--spacing-xl</code></td>
+                        <td>40px</td>
+                        <td>Espaçamento extra grande</td>
+                    </tr>
+                    <tr>
+                        <td><code>--spacing-xxl</code></td>
+                        <td>65px</td>
+                        <td>Espaçamento extra extra grande</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Cores -->
+        <section class="docs-section" id="cores">
+            <h2 class="docs-section__title">Cores</h2>
+            
+            <div class="docs-component">
+                <h3 class="docs-component__name">Uso de Cores</h3>
+                <p class="docs-component__description">As cores do design system devem ser usadas através das variáveis CSS para garantir consistência e facilitar manutenção.</p>
+                
+                <h4>Exemplo de Uso</h4>
+                <pre class="docs-code"><span class="docs-code__comment">/* Usando variáveis de cor */</span>
+<span class="docs-code__tag">.meu-elemento</span> {
+    <span class="docs-code__attr">background-color</span>: <span class="docs-code__value">var(--color-primary)</span>;
+    <span class="docs-code__attr">color</span>: <span class="docs-code__value">var(--color-white)</span>;
+    <span class="docs-code__attr">border</span>: <span class="docs-code__value">1px solid var(--color-grey)</span>;
+}</pre>
+
+                <h4>Paleta de Cores</h4>
+                <div class="docs-preview">
+                    <div class="color-grid">
+                        <div class="color-card">
+                            <div class="color-card__swatch color-card__swatch--primary"></div>
+                            <div class="color-card__info">
+                                <h3 class="color-card__name">Primary</h3>
+                                <p class="color-card__value">#F34E4E</p>
+                                <p class="color-card__variable">--color-primary</p>
+                            </div>
+                        </div>
+                        <div class="color-card">
+                            <div class="color-card__swatch color-card__swatch--secondary"></div>
+                            <div class="color-card__info">
+                                <h3 class="color-card__name">Secondary</h3>
+                                <p class="color-card__value">#FFF6EA</p>
+                                <p class="color-card__variable">--color-secondary</p>
+                            </div>
+                        </div>
+                        <div class="color-card">
+                            <div class="color-card__swatch color-card__swatch--action"></div>
+                            <div class="color-card__info">
+                                <h3 class="color-card__name">Action</h3>
+                                <p class="color-card__value">#7BB9FA</p>
+                                <p class="color-card__variable">--color-action</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tipografia -->
+        <section class="docs-section" id="tipografia">
+            <h2 class="docs-section__title">Tipografia</h2>
+            
+            <div class="docs-component">
+                <h3 class="docs-component__name">Hierarquia Tipográfica</h3>
+                <p class="docs-component__description">O design system define uma hierarquia tipográfica clara com 5 níveis: H1, H2, H3, H4 e Paragraph.</p>
+                
+                <h4>Exemplo de Uso</h4>
+                <pre class="docs-code"><span class="docs-code__comment">&lt;!-- HTML --&gt;</span>
+<span class="docs-code__tag">&lt;h1&gt;</span>Título Principal<span class="docs-code__tag">&lt;/h1&gt;</span>
+<span class="docs-code__tag">&lt;h2&gt;</span>Subtítulo Principal<span class="docs-code__tag">&lt;/h2&gt;</span>
+<span class="docs-code__tag">&lt;h3&gt;</span>Subtítulo Secundário<span class="docs-code__tag">&lt;/h3&gt;</span>
+<span class="docs-code__tag">&lt;h4&gt;</span>Subtítulo Terciário<span class="docs-code__tag">&lt;/h4&gt;</span>
+<span class="docs-code__tag">&lt;p&gt;</span>Texto de parágrafo<span class="docs-code__tag">&lt;/p&gt;</span></pre>
+
+                <div class="docs-preview">
+                    <h1>Heading 1 - Título Principal (48px/60px)</h1>
+                    <h2>Heading 2 - Subtítulo Principal (34px/50px)</h2>
+                    <h3>Heading 3 - Subtítulo Secundário (28px/38px)</h3>
+                    <h4>Heading 4 - Subtítulo Terciário (18px/22px)</h4>
+                    <p>Paragraph - Texto de parágrafo (14px/24px)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Espaçamento -->
+        <section class="docs-section" id="espacamento">
+            <h2 class="docs-section__title">Espaçamento</h2>
+            
+            <div class="docs-component">
+                <h3 class="docs-component__name">Sistema de Espaçamento</h3>
+                <p class="docs-component__description">O design system utiliza um sistema de espaçamento consistente com 6 tamanhos: XS, S, M, L, XL e XXL.</p>
+                
+                <h4>Exemplo de Uso</h4>
+                <pre class="docs-code"><span class="docs-code__comment">/* Usando variáveis de espaçamento */</span>
+<span class="docs-code__tag">.meu-elemento</span> {
+    <span class="docs-code__attr">padding</span>: <span class="docs-code__value">var(--spacing-m)</span>;
+    <span class="docs-code__attr">margin-bottom</span>: <span class="docs-code__value">var(--spacing-l)</span>;
+    <span class="docs-code__attr">gap</span>: <span class="docs-code__value">var(--spacing-s)</span>;
+}</pre>
+
+                <table class="docs-table">
+                    <thead>
+                        <tr>
+                            <th>Tamanho</th>
+                            <th>Variável</th>
+                            <th>Valor</th>
+                            <th>Uso Recomendado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>XS</td>
+                            <td><code>--spacing-xs</code></td>
+                            <td>5px</td>
+                            <td>Espaçamento mínimo entre elementos muito próximos</td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td><code>--spacing-s</code></td>
+                            <td>10px</td>
+                            <td>Padding interno de elementos pequenos</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td><code>--spacing-m</code></td>
+                            <td>15px</td>
+                            <td>Espaçamento padrão entre elementos relacionados</td>
+                        </tr>
+                        <tr>
+                            <td>L</td>
+                            <td><code>--spacing-l</code></td>
+                            <td>25px</td>
+                            <td>Espaçamento entre seções relacionadas</td>
+                        </tr>
+                        <tr>
+                            <td>XL</td>
+                            <td><code>--spacing-xl</code></td>
+                            <td>40px</td>
+                            <td>Espaçamento entre seções distintas</td>
+                        </tr>
+                        <tr>
+                            <td>XXL</td>
+                            <td><code>--spacing-xxl</code></td>
+                            <td>65px</td>
+                            <td>Espaçamento entre blocos principais de conteúdo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Botões -->
+        <section class="docs-section" id="botoes">
+            <h2 class="docs-section__title">Botões</h2>
+            
+            <div class="docs-component">
+                <h3 class="docs-component__name">Botão Primary</h3>
+                <span class="docs-badge docs-badge--required">Obrigatório</span>
+                <p class="docs-component__description">Botão principal usado para ações primárias. Utiliza a cor Primary do design system.</p>
+                
+                <h4>Exemplo de Uso</h4>
+                <pre class="docs-code"><span class="docs-code__comment">&lt;!-- Botão Primary --&gt;</span>
+<span class="docs-code__tag">&lt;button</span> <span class="docs-code__attr">type</span>=<span class="docs-code__value">"button"</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"btn btn--primary"</span><span class="docs-code__tag">&gt;</span>
+    Primary Button
+<span class="docs-code__tag">&lt;/button&gt;</span>
+
+<span class="docs-code__comment">&lt;!-- Botão Primary Disabled --&gt;</span>
+<span class="docs-code__tag">&lt;button</span> <span class="docs-code__attr">type</span>=<span class="docs-code__value">"button"</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"btn btn--primary"</span> <span class="docs-code__attr">disabled</span><span class="docs-code__tag">&gt;</span>
+    Primary Disabled
+<span class="docs-code__tag">&lt;/button&gt;</span></pre>
+
+                <div class="docs-preview">
+                    <button type="button" class="btn btn--primary">Primary Button</button>
+                    <button type="button" class="btn btn--primary" disabled>Primary Disabled</button>
+                </div>
+
+                <h4>Classes CSS</h4>
+                <ul>
+                    <li><code>.btn</code> - Classe base do botão</li>
+                    <li><code>.btn--primary</code> - Modificador para botão primary</li>
+                </ul>
+            </div>
+
+            <div class="docs-component">
+                <h3 class="docs-component__name">Botão Alternative</h3>
+                <span class="docs-badge docs-badge--optional">Opcional</span>
+                <p class="docs-component__description">Botão alternativo usado para ações secundárias. Utiliza a cor Secondary do design system com borda.</p>
+                
+                <h4>Exemplo de Uso</h4>
+                <pre class="docs-code"><span class="docs-code__comment">&lt;!-- Botão Alternative --&gt;</span>
+<span class="docs-code__tag">&lt;button</span> <span class="docs-code__attr">type</span>=<span class="docs-code__value">"button"</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"btn btn--alternative"</span><span class="docs-code__tag">&gt;</span>
+    Alternative Button
+<span class="docs-code__tag">&lt;/button&gt;</span>
+
+<span class="docs-code__comment">&lt;!-- Botão Alternative Disabled --&gt;</span>
+<span class="docs-code__tag">&lt;button</span> <span class="docs-code__attr">type</span>=<span class="docs-code__value">"button"</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"btn btn--alternative"</span> <span class="docs-code__attr">disabled</span><span class="docs-code__tag">&gt;</span>
+    Alternative Disabled
+<span class="docs-code__tag">&lt;/button&gt;</span></pre>
+
+                <div class="docs-preview">
+                    <button type="button" class="btn btn--alternative">Alternative Button</button>
+                    <button type="button" class="btn btn--alternative" disabled>Alternative Disabled</button>
+                </div>
+
+                <h4>Classes CSS</h4>
+                <ul>
+                    <li><code>.btn</code> - Classe base do botão</li>
+                    <li><code>.btn--alternative</code> - Modificador para botão alternative</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Formulários -->
+        <section class="docs-section" id="formularios">
+            <h2 class="docs-section__title">Formulários</h2>
+            
+            <div class="docs-component">
+                <h3 class="docs-component__name">Input - Campo de Texto</h3>
+                <p class="docs-component__description">Campo de entrada de texto com estados default, focus e error.</p>
+                
+                <h4>Exemplo de Uso</h4>
+                <pre class="docs-code"><span class="docs-code__comment">&lt;!-- Input Default --&gt;</span>
+<span class="docs-code__tag">&lt;div</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"form-group"</span><span class="docs-code__tag">&gt;</span>
+    <span class="docs-code__tag">&lt;label</span> <span class="docs-code__attr">for</span>=<span class="docs-code__value">"input-id"</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"form-label"</span><span class="docs-code__tag">&gt;</span>Label<span class="docs-code__tag">&lt;/label&gt;</span>
+    <span class="docs-code__tag">&lt;input</span> <span class="docs-code__attr">type</span>=<span class="docs-code__value">"text"</span> <span class="docs-code__attr">id</span>=<span class="docs-code__value">"input-id"</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"form-input"</span> 
+           <span class="docs-code__attr">placeholder</span>=<span class="docs-code__value">"Digite seu texto"</span><span class="docs-code__tag">&gt;</span>
+<span class="docs-code__tag">&lt;/div&gt;</span>
+
+<span class="docs-code__comment">&lt;!-- Input Error --&gt;</span>
+<span class="docs-code__tag">&lt;div</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"form-group"</span><span class="docs-code__tag">&gt;</span>
+    <span class="docs-code__tag">&lt;label</span> <span class="docs-code__attr">for</span>=<span class="docs-code__value">"input-error"</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"form-label"</span><span class="docs-code__tag">&gt;</span>Label<span class="docs-code__tag">&lt;/label&gt;</span>
+    <span class="docs-code__tag">&lt;input</span> <span class="docs-code__attr">type</span>=<span class="docs-code__value">"text"</span> <span class="docs-code__attr">id</span>=<span class="docs-code__value">"input-error"</span> 
+           <span class="docs-code__attr">class</span>=<span class="docs-code__value">"form-input form-input--error"</span><span class="docs-code__tag">&gt;</span>
+    <span class="docs-code__tag">&lt;span</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"form-input-error"</span><span class="docs-code__tag">&gt;</span>Mensagem de erro<span class="docs-code__tag">&lt;/span&gt;</span>
+<span class="docs-code__tag">&lt;/div&gt;</span></pre>
+
+                <div class="docs-preview">
+                    <div class="form-group">
+                        <label for="doc-input-1" class="form-label">Label Default</label>
+                        <input type="text" id="doc-input-1" class="form-input" placeholder="Digite seu texto">
+                    </div>
+                    <div class="form-group">
+                        <label for="doc-input-2" class="form-label">Label Error</label>
+                        <input type="text" id="doc-input-2" class="form-input form-input--error" value="valor inválido">
+                        <span class="form-input-error">Este campo contém um erro</span>
+                    </div>
+                </div>
+
+                <h4>Classes CSS</h4>
+                <ul>
+                    <li><code>.form-group</code> - Container do campo de formulário</li>
+                    <li><code>.form-label</code> - Label do campo</li>
+                    <li><code>.form-input</code> - Campo de entrada</li>
+                    <li><code>.form-input--error</code> - Modificador para estado de erro</li>
+                    <li><code>.form-input-error</code> - Mensagem de erro</li>
+                </ul>
+            </div>
+
+            <div class="docs-component">
+                <h3 class="docs-component__name">Checkbox</h3>
+                <p class="docs-component__description">Componente de checkbox com estados default, checked e disabled.</p>
+                
+                <h4>Exemplo de Uso</h4>
+                <pre class="docs-code"><span class="docs-code__tag">&lt;label</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"form-checkbox"</span><span class="docs-code__tag">&gt;</span>
+    <span class="docs-code__tag">&lt;input</span> <span class="docs-code__attr">type</span>=<span class="docs-code__value">"checkbox"</span> <span class="docs-code__attr">name</span>=<span class="docs-code__value">"checkbox-name"</span><span class="docs-code__tag">&gt;</span>
+    <span class="docs-code__tag">&lt;span</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"form-checkbox__box"</span><span class="docs-code__tag">&gt;&lt;/span&gt;</span>
+    <span class="docs-code__tag">&lt;span</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"form-checkbox__label"</span><span class="docs-code__tag">&gt;</span>Checkbox Label<span class="docs-code__tag">&lt;/span&gt;</span>
+<span class="docs-code__tag">&lt;/label&gt;</span></pre>
+
+                <div class="docs-preview">
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="doc-checkbox-1">
+                        <span class="form-checkbox__box"></span>
+                        <span class="form-checkbox__label">Checkbox Default</span>
+                    </label>
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="doc-checkbox-2" checked>
+                        <span class="form-checkbox__box"></span>
+                        <span class="form-checkbox__label">Checkbox Checked</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="docs-component">
+                <h3 class="docs-component__name">Radio Button</h3>
+                <p class="docs-component__description">Componente de radio button com estados default, selected e disabled.</p>
+                
+                <h4>Exemplo de Uso</h4>
+                <pre class="docs-code"><span class="docs-code__tag">&lt;label</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"form-radio"</span><span class="docs-code__tag">&gt;</span>
+    <span class="docs-code__tag">&lt;input</span> <span class="docs-code__attr">type</span>=<span class="docs-code__value">"radio"</span> <span class="docs-code__attr">name</span>=<span class="docs-code__value">"radio-group"</span> <span class="docs-code__attr">value</span>=<span class="docs-code__value">"option1"</span><span class="docs-code__tag">&gt;</span>
+    <span class="docs-code__tag">&lt;span</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"form-radio__circle"</span><span class="docs-code__tag">&gt;&lt;/span&gt;</span>
+    <span class="docs-code__tag">&lt;span</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"form-radio__label"</span><span class="docs-code__tag">&gt;</span>Radio Label<span class="docs-code__tag">&lt;/span&gt;</span>
+<span class="docs-code__tag">&lt;/label&gt;</span></pre>
+
+                <div class="docs-preview">
+                    <label class="form-radio">
+                        <input type="radio" name="doc-radio" value="option1">
+                        <span class="form-radio__circle"></span>
+                        <span class="form-radio__label">Radio Default</span>
+                    </label>
+                    <label class="form-radio">
+                        <input type="radio" name="doc-radio" value="option2" checked>
+                        <span class="form-radio__circle"></span>
+                        <span class="form-radio__label">Radio Selected</span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabs -->
+        <section class="docs-section" id="tabs">
+            <h2 class="docs-section__title">Tabs</h2>
+            
+            <div class="docs-component">
+                <h3 class="docs-component__name">Tabs Horizontal</h3>
+                <p class="docs-component__description">Componente de tabs dispostas horizontalmente com estados default, hover e active.</p>
+                
+                <h4>Exemplo de Uso</h4>
+                <pre class="docs-code"><span class="docs-code__tag">&lt;ul</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"tabs tabs--horizontal"</span> <span class="docs-code__attr">role</span>=<span class="docs-code__value">"tablist"</span><span class="docs-code__tag">&gt;</span>
+    <span class="docs-code__tag">&lt;li</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"tabs__item tabs__item--active"</span> <span class="docs-code__attr">role</span>=<span class="docs-code__value">"presentation"</span><span class="docs-code__tag">&gt;</span>
+        <span class="docs-code__tag">&lt;button</span> <span class="docs-code__attr">type</span>=<span class="docs-code__value">"button"</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"tabs__button"</span> 
+                <span class="docs-code__attr">role</span>=<span class="docs-code__value">"tab"</span> <span class="docs-code__attr">aria-selected</span>=<span class="docs-code__value">"true"</span><span class="docs-code__tag">&gt;</span>
+            Tab 1
+        <span class="docs-code__tag">&lt;/button&gt;</span>
+    <span class="docs-code__tag">&lt;/li&gt;</span>
+    <span class="docs-code__tag">&lt;li</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"tabs__item"</span> <span class="docs-code__attr">role</span>=<span class="docs-code__value">"presentation"</span><span class="docs-code__tag">&gt;</span>
+        <span class="docs-code__tag">&lt;button</span> <span class="docs-code__attr">type</span>=<span class="docs-code__value">"button"</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"tabs__button"</span> 
+                <span class="docs-code__attr">role</span>=<span class="docs-code__value">"tab"</span> <span class="docs-code__attr">aria-selected</span>=<span class="docs-code__value">"false"</span><span class="docs-code__tag">&gt;</span>
+            Tab 2
+        <span class="docs-code__tag">&lt;/button&gt;</span>
+    <span class="docs-code__tag">&lt;/li&gt;</span>
+<span class="docs-code__tag">&lt;/ul&gt;</span></pre>
+
+                <div class="docs-preview">
+                    <ul class="tabs tabs--horizontal" role="tablist">
+                        <li class="tabs__item tabs__item--active" role="presentation">
+                            <button type="button" class="tabs__button" role="tab" aria-selected="true">Tab 1</button>
+                        </li>
+                        <li class="tabs__item" role="presentation">
+                            <button type="button" class="tabs__button" role="tab" aria-selected="false">Tab 2</button>
+                        </li>
+                        <li class="tabs__item" role="presentation">
+                            <button type="button" class="tabs__button" role="tab" aria-selected="false">Tab 3</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h4>Classes CSS</h4>
+                <ul>
+                    <li><code>.tabs</code> - Container das tabs</li>
+                    <li><code>.tabs--horizontal</code> - Modificador para tabs horizontais</li>
+                    <li><code>.tabs__item</code> - Item individual da tab</li>
+                    <li><code>.tabs__item--active</code> - Modificador para tab ativa</li>
+                    <li><code>.tabs__button</code> - Botão da tab</li>
+                </ul>
+            </div>
+
+            <div class="docs-component">
+                <h3 class="docs-component__name">Tabs Vertical</h3>
+                <p class="docs-component__description">Componente de tabs dispostas verticalmente com estados default, hover e active.</p>
+                
+                <h4>Exemplo de Uso</h4>
+                <pre class="docs-code"><span class="docs-code__tag">&lt;ul</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"tabs tabs--vertical"</span> <span class="docs-code__attr">role</span>=<span class="docs-code__value">"tablist"</span><span class="docs-code__tag">&gt;</span>
+    <span class="docs-code__tag">&lt;li</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"tabs__item tabs__item--active"</span> <span class="docs-code__attr">role</span>=<span class="docs-code__value">"presentation"</span><span class="docs-code__tag">&gt;</span>
+        <span class="docs-code__tag">&lt;button</span> <span class="docs-code__attr">type</span>=<span class="docs-code__value">"button"</span> <span class="docs-code__attr">class</span>=<span class="docs-code__value">"tabs__button"</span> 
+                <span class="docs-code__attr">role</span>=<span class="docs-code__value">"tab"</span> <span class="docs-code__attr">aria-selected</span>=<span class="docs-code__value">"true"</span><span class="docs-code__tag">&gt;</span>
+            Tab 1
+        <span class="docs-code__tag">&lt;/button&gt;</span>
+    <span class="docs-code__tag">&lt;/li&gt;</span>
+<span class="docs-code__tag">&lt;/ul&gt;</span></pre>
+
+                <h4>Classes CSS</h4>
+                <ul>
+                    <li><code>.tabs</code> - Container das tabs</li>
+                    <li><code>.tabs--vertical</code> - Modificador para tabs verticais</li>
+                    <li><code>.tabs__item</code> - Item individual da tab</li>
+                    <li><code>.tabs__item--active</code> - Modificador para tab ativa</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Acessibilidade -->
+        <section class="docs-section" id="acessibilidade">
+            <h2 class="docs-section__title">Acessibilidade</h2>
+            
+            <div class="docs-component">
+                <h3 class="docs-component__name">Diretrizes de Acessibilidade</h3>
+                <p class="docs-component__description">O design system foi desenvolvido seguindo as melhores práticas de acessibilidade (WCAG 2.1).</p>
+                
+                <h4>Contraste de Cores</h4>
+                <p>Todas as combinações de cores do design system atendem aos requisitos mínimos de contraste:</p>
+                <ul>
+                    <li>Texto normal: mínimo de 4.5:1</li>
+                    <li>Texto grande (18px+): mínimo de 3:1</li>
+                    <li>Elementos interativos: mínimo de 3:1</li>
+                </ul>
+
+                <h4>ARIA Labels</h4>
+                <p>Todos os componentes interativos incluem atributos ARIA apropriados:</p>
+                <ul>
+                    <li><strong>Botões:</strong> <code>type="button"</code> para botões não-submit</li>
+                    <li><strong>Tabs:</strong> <code>role="tablist"</code>, <code>role="tab"</code>, <code>aria-selected</code></li>
+                    <li><strong>Formulários:</strong> Labels associados com <code>for</code> e <code>id</code></li>
+                </ul>
+
+                <h4>Navegação por Teclado</h4>
+                <p>Todos os componentes são totalmente navegáveis por teclado:</p>
+                <ul>
+                    <li><strong>Tab:</strong> Navega entre elementos focáveis</li>
+                    <li><strong>Enter/Space:</strong> Ativa botões e checkboxes</li>
+                    <li><strong>Setas:</strong> Navega entre tabs (quando implementado com JavaScript)</li>
+                </ul>
+
+                <h4>Estados de Foco</h4>
+                <p>Todos os elementos interativos possuem estados de foco visíveis usando a cor Action (#7BB9FA).</p>
+
+                <h4>Checklist de Acessibilidade</h4>
+                <ul>
+                    <li>✓ Contraste de cores adequado</li>
+                    <li>✓ Labels em todos os campos de formulário</li>
+                    <li>✓ Atributos ARIA apropriados</li>
+                    <li>✓ Navegação por teclado funcional</li>
+                    <li>✓ Estados de foco visíveis</li>
+                    <li>✓ Textos alternativos (quando aplicável)</li>
+                    <li>✓ Estrutura semântica HTML5</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Design System. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
