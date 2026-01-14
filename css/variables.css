@@ -1,0 +1,43 @@
+/* ============================================
+   Design System - Variáveis CSS
+   ============================================ */
+
+:root {
+    /* Cores - Color Palette */
+    --color-primary: #F34E4E;
+    --color-secondary: #FFF6EA;
+    --color-action: #7BB9FA;
+    --color-grey: #D0D0D0;
+    --color-black: #282828;
+    --color-white: #FFFFFF;
+
+    /* Espaçamento - Spacing System */
+    --spacing-xs: 5px;
+    --spacing-s: 10px;
+    --spacing-m: 15px;
+    --spacing-l: 25px;
+    --spacing-xl: 40px;
+    --spacing-xxl: 65px;
+
+    /* Tipografia - Typography */
+    --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    
+    /* Tamanhos de fonte */
+    --font-size-h1: 48px;
+    --font-size-h2: 34px;
+    --font-size-h3: 28px;
+    --font-size-h4: 18px;
+    --font-size-paragraph: 14px;
+    
+    /* Line heights */
+    --line-height-h1: 60px;
+    --line-height-h2: 50px;
+    --line-height-h3: 38px;
+    --line-height-h4: 22px;
+    --line-height-paragraph: 24px;
+
+    /* Layout */
+    --container-max-width: 1200px;
+    --border-radius: 4px;
+    --transition-base: 0.3s ease;
+}
