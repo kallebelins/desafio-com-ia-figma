@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de exemplo - Formulário Sign Up usando o Design System">
+    <title>Sign Up - Design System</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="signup-page">
+        <div class="signup-container">
+            <header class="signup-header">
+                <h1>Sign Up</h1>
+                <p class="signup-subtitle">Crie sua conta para começar</p>
+            </header>
+
+            <main class="signup-main">
+                <!-- Tabs Individual/Agency -->
+                <div class="signup-tabs-wrapper">
+                    <ul class="tabs tabs--horizontal" role="tablist" id="signup-tabs">
+                        <li class="tabs__item tabs__item--active" role="presentation">
+                            <button type="button" class="tabs__button" role="tab" aria-selected="true" aria-controls="tab-individual" id="tab-individual-btn" data-tab="individual">
+                                Individual
+                            </button>
+                        </li>
+                        <li class="tabs__item" role="presentation">
+                            <button type="button" class="tabs__button" role="tab" aria-selected="false" aria-controls="tab-agency" id="tab-agency-btn" data-tab="agency">
+                                Agency
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Formulário -->
+                <form class="signup-form" id="signup-form" novalidate>
+                    <!-- Tab Panel Individual -->
+                    <div class="tab-panel" id="tab-individual" role="tabpanel" aria-labelledby="tab-individual-btn">
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="fullname-individual" class="form-label form-label--required">
+                                Full Name
+                            </label>
+                            <input 
+                                type="text" 
+                                id="fullname-individual" 
+                                name="fullname" 
+                                class="form-input" 
+                                placeholder="Digite seu nome completo"
+                                required
+                                aria-required="true"
+                            >
+                            <span class="form-input-error" id="fullname-individual-error" role="alert"></span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email-individual" class="form-label form-label--required">
+                                Email
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email-individual" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="Digite seu email"
+                                required
+                                aria-required="true"
+                            >
+                            <span class="form-input-error" id="email-individual-error" role="alert"></span>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label for="password-individual" class="form-label form-label--required">
+                                Password
+                            </label>
+                            <input 
+                                type="password" 
+                                id="password-individual" 
+                                name="password" 
+                                class="form-input" 
+                                placeholder="Digite sua senha"
+                                required
+                                aria-required="true"
+                            >
+                            <span class="form-input-error" id="password-individual-error" role="alert"></span>
+                        </div>
+                    </div>
+
+                    <!-- Tab Panel Agency -->
+                    <div class="tab-panel" id="tab-agency" role="tabpanel" aria-labelledby="tab-agency-btn" hidden>
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="fullname-agency" class="form-label form-label--required">
+                                Full Name
+                            </label>
+                            <input 
+                                type="text" 
+                                id="fullname-agency" 
+                                name="fullname" 
+                                class="form-input" 
+                                placeholder="Digite o nome da agência"
+                                required
+                                aria-required="true"
+                            >
+                            <span class="form-input-error" id="fullname-agency-error" role="alert"></span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email-agency" class="form-label form-label--required">
+                                Email
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email-agency" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="Digite o email da agência"
+                                required
+                                aria-required="true"
+                            >
+                            <span class="form-input-error" id="email-agency-error" role="alert"></span>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label for="password-agency" class="form-label form-label--required">
+                                Password
+                            </label>
+                            <input 
+                                type="password" 
+                                id="password-agency" 
+                                name="password" 
+                                class="form-input" 
+                                placeholder="Digite a senha"
+                                required
+                                aria-required="true"
+                            >
+                            <span class="form-input-error" id="password-agency-error" role="alert"></span>
+                        </div>
+                    </div>
+
+                    <!-- Checkbox de Termos -->
+                    <div class="form-group form-group--checkbox">
+                        <label class="form-checkbox">
+                            <input 
+                                type="checkbox" 
+                                id="terms" 
+                                name="terms" 
+                                required
+                                aria-required="true"
+                            >
+                            <span class="form-checkbox__box"></span>
+                            <span class="form-checkbox__label">
+                                Eu aceito os <a href="#" class="signup-link">termos e condições</a>
+                            </span>
+                        </label>
+                        <span class="form-input-error" id="terms-error" role="alert"></span>
+                    </div>
+
+                    <!-- Botões -->
+                    <div class="signup-actions">
+                        <button type="submit" class="btn btn--primary">
+                            Sign Up
+                        </button>
+                        <button type="button" class="btn btn--alternative" id="cancel-btn">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </main>
+
+            <footer class="signup-footer">
+                <p>Já tem uma conta? <a href="#" class="signup-link">Faça login</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>

@@ -109,16 +109,41 @@
 - [x] Criar uma checklist identificando todo uso de estilos inline ou CSS não documentado, e refatorar para que residam apenas em `index.css`.
 - [x] Atualizar todos os exemplos de uso, separando claramente os estilos do design system dos estilos de visualização/auxiliares (estes somente no `index.css`), evitando customizações manuais no HTML demo.
 
+## Páginas de Exemplo Sugeridas
 
-## Componente de Exemplo - Formulário Sign Up
+- [x] Criar pasta `/exemplos` para armazenar as páginas de exemplo sugeridas.
+- [x] Para cada página de exemplo criada em `/exemplos`, adicionar um link de navegação correspondente na página principal do Design System (`index.html`), facilitando o acesso direto às páginas demonstrativas pelo menu ou seção dedicada de navegação.
 
-- [ ] Criar estrutura HTML do formulário Sign Up
-- [ ] Implementar tabs Individual/Agency no formulário
-- [ ] Implementar campos de formulário (Full Name, Email, Password)
-- [ ] Implementar checkbox de termos no formulário
-- [ ] Implementar botões Sign Up e Cancel no formulário
-- [ ] Estilizar formulário Sign Up completo
-- [ ] Garantir responsividade do formulário
+
+### Formulário Sign Up
+
+Tem a referência dessa página como um componente em https://www.figma.com/design/aWLMnDzEygnsGOv998MT79/Basic-Design%C2%A0System--Community-?node-id=0-1&m=dev&t=DFVy98yko1tH3PuN-1
+
+- [x] Criar página Sign Up (estrutura HTML)
+- [x] Implementar tabs Individual/Agency na página Sign Up
+- [x] Implementar campos de formulário (Full Name, Email, Password) na página
+- [x] Implementar checkbox de termos na página
+- [x] Implementar botões Sign Up e Cancel na página
+- [x] Estilizar página Sign Up completa
+- [x] Garantir responsividade da página Sign Up
+
+### Dashboard
+
+- [ ] Criar página de Dashboard com layout básico usando o design system (cards, gráficos ou resumos, navegação lateral/superior).
+- [ ] Demonstrar uso de componentes como cards, tabelas e abas no contexto do Dashboard.
+- [ ] Garantir responsividade da página e uso consistente do design system.
+
+### Perfil do Usuário
+
+- [ ] Criar página de Perfil do Usuário exibindo informações do usuário (avatar, nome, e-mail, bio, etc.).
+- [ ] Incluir exemplos de formulários de edição de perfil reutilizando componentes do design system.
+- [ ] Adicionar demonstração de listas de dados pessoais, opções de configuração e ações (botões).
+
+### Cadastro em Sistema (Sign Up Page)
+
+- [ ] Criar página de Cadastro em Sistema separada, focada no fluxo de registro de novos usuários.
+- [ ] Destacar alternativas de autenticação (login social, e-mail/senha) utilizando componentes do design system para campos, botões e feedbacks.
+- [ ] Garantir clareza visual, validação de campos e responsividade no formulário de cadastro.
 
 ## Documentação e Finalização
 
