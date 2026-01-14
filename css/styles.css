@@ -143,3 +143,111 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Typography - Estilos Base */
+h1 {
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-h1);
+    color: var(--color-black);
+    font-weight: 600;
+    margin-bottom: var(--spacing-m);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-h2);
+    color: var(--color-black);
+    font-weight: 600;
+    margin-bottom: var(--spacing-m);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+    line-height: var(--line-height-h3);
+    color: var(--color-black);
+    font-weight: 600;
+    margin-bottom: var(--spacing-s);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+    line-height: var(--line-height-h4);
+    color: var(--color-black);
+    font-weight: 600;
+    margin-bottom: var(--spacing-s);
+}
+
+p {
+    font-size: var(--font-size-paragraph);
+    line-height: var(--line-height-paragraph);
+    color: var(--color-black);
+    margin-bottom: var(--spacing-m);
+}
+
+/* Typography - Seção de Demonstração */
+.typography-section {
+    margin-top: var(--spacing-l);
+}
+
+.typography-example {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-l);
+    margin-bottom: var(--spacing-l);
+}
+
+.typography-example__label {
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--color-black);
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--spacing-s);
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+}
+
+.typography-example__preview {
+    margin-bottom: var(--spacing-xs);
+}
+
+.typography-example__details {
+    margin-top: var(--spacing-s);
+    padding-top: var(--spacing-s);
+    border-top: 1px solid var(--color-grey);
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--color-black);
+    opacity: 0.7;
+    font-family: 'Courier New', monospace;
+}
+
+.typography-example__details span {
+    display: inline-block;
+    margin-right: var(--spacing-m);
+}
+
+.typography-example__details strong {
+    font-weight: 600;
+    opacity: 1;
+}
+
+/* Responsividade para tipografia */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    
+    h2 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    
+    h3 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}

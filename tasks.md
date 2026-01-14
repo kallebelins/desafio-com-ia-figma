@@ -46,13 +46,13 @@
 
 ## Tipografia (Typography)
 
-- [ ] Definir estilos CSS para H1 (48px/60px line-height)
-- [ ] Definir estilos CSS para H2 (34px/50px line-height)
-- [ ] Definir estilos CSS para H3 (28px/38px line-height)
-- [ ] Definir estilos CSS para H4 (18px/22px line-height)
-- [ ] Definir estilos CSS para Paragraph (14px/24px line-height)
-- [ ] Criar seção de demonstração de tipografia no HTML
-- [ ] Estilizar seção de tipografia com exemplos
+- [x] Definir estilos CSS para H1 (48px/60px line-height)
+- [x] Definir estilos CSS para H2 (34px/50px line-height)
+- [x] Definir estilos CSS para H3 (28px/38px line-height)
+- [x] Definir estilos CSS para H4 (18px/22px line-height)
+- [x] Definir estilos CSS para Paragraph (14px/24px line-height)
+- [x] Criar seção de demonstração de tipografia no HTML
+- [x] Estilizar seção de tipografia com exemplos
 
 ## Espaçamento (Spacing)
 
